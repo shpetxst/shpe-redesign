@@ -145,37 +145,7 @@ const MembershipSection = () => {
         </div>
         
         {/* Testimonial */}
-        <div className="mt-20 bg-primary-700 rounded-2xl overflow-hidden shadow-xl">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 md:p-12 flex items-center">
-              <div>
-                <svg
-                  className="h-12 w-12 text-primary-300 mb-6"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                >
-                  <path d="M9.352 4C4.456 4 2 7.456 2 11.352v16.256c0 0.8 0.8 1.6 1.6 1.6h8c0.8 0 1.6-0.8 1.6-1.6v-8c0-0.8-0.8-1.6-1.6-1.6h-3.2v-0.8c0-1.6 1.6-3.2 3.2-3.2h1.6c0.8 0 1.6-0.8 1.6-1.6v-6.4c0-0.8-0.8-1.6-1.6-1.6h-1.6z M23.2 4c-4.8 0-7.2 3.456-7.2 7.352v16.256c0 0.8 0.8 1.6 1.6 1.6h8c0.8 0 1.6-0.8 1.6-1.6v-8c0-0.8-0.8-1.6-1.6-1.6h-3.2v-0.8c0-1.6 1.6-3.2 3.2-3.2h1.6c0.8 0 1.6-0.8 1.6-1.6v-6.4c0-0.8-0.8-1.6-1.6-1.6h-1.6z" />
-                </svg>
-                <p className="text-xl md:text-2xl font-medium text-white mb-6 leading-relaxed">
-                  Joining SHPE at Texas State was the best decision I made in my academic career. The mentorship, professional connections, and leadership opportunities have been invaluable to my growth as an engineer and as a person.
-                </p>
-                <div>
-                  <p className="text-white font-semibold">Maria Rodriguez</p>
-                  <p className="text-primary-200">Computer Engineering, Class of 2023</p>
-                  <p className="text-primary-200 mt-1">Now Software Engineer at IBM</p>
-                </div>
-              </div>
-            </div>
-            <div className="hidden md:block relative">
-              <img
-                src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="SHPE Success Story"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
