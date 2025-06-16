@@ -34,7 +34,7 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="mt-20 bg-primary-700 rounded-2xl overflow-hidden shadow-xl">
+        <div className="mt-20 mb-16 bg-primary-700 rounded-2xl overflow-hidden shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12 flex items-center">
               <div>
@@ -166,19 +166,6 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <div className="relative h-80">
-              <img 
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="SHPE Students working together" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-8 text-white">
-                  <h4 className="text-xl font-bold mb-2">Engineering a brighter future together</h4>
-                  <p className="text-sm">SHPE Texas State students collaborating on a project</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
