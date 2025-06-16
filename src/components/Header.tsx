@@ -8,7 +8,7 @@ const Header = () => {
 
   const menuItems = [
     { name: 'Home', href: '#' },
-    { name: 'Events', href: '#events' },
+    { name: 'Calendar', href: '#calendar' },
     { name: 'About', href: '#about' },
     { 
       name: 'Programs', 

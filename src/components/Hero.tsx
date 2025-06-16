@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const backgroundImages = [
-  'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  'https://images.pexels.com/photos/3861960/pexels-photo-3861960.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  'https://images.pexels.com/photos/3861962/pexels-photo-3861962.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  '/images/hero/hero1.JPG',
+  '/images/hero/hero2.JPG',
+  '/images/hero/hero3.JPG',
   // Add more images as needed
 ];
 
