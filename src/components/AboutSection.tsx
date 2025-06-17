@@ -1,8 +1,55 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Target, Heart, BookOpen } from 'lucide-react';
+
+type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+};
+
+function Modal({ isOpen, onClose, children}: ModalProps){
+  if (!isOpen) return null;
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity duration-300 animate-fadeIn"
+      onClick={onClose}
+    >
+      <div
+        className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full mx-4 p-8 animate-modalIn"
+        onClick={e => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-primary-600 transition-colors text-2xl font-bold focus:outline-none"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        {children}
+      </div>
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.25s ease;
+        }
+        @keyframes modalIn {
+          from { opacity: 0; transform: scale(0.95) translateY(20px); }
+          to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-modalIn {
+          animation: modalIn 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+      `}</style>
+    </div>
+  );
+}
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [openModal, setOpenModal] = useState<null | 'mission' | 'vision'>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,10 +120,13 @@ const AboutSection = () => {
                 <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-6">
-                At Texas State SHPE, we empower Hispanic students to excel in promoting education, innovation, and professional growth. In alignment with the College of Science and Engineering, we foster an inclusive environment where students gain the skills and knowledge necessary for successful careers in science, technology, engineering, and mathematics, while addressing both regional and global challenges through innovation and research.
+                To empower Hispanic students for successful STEM careers by providing an inclusive environment for professional growth, innovation, and research that addresses real-world challenges.
               </p>
               <div className="flex justify-end">
-                <button className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center">
+                <button 
+                  className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center cursor-pointer hover:underline transition"
+                  onClick={() => setOpenModal('mission')}
+                >
                   Learn more
                   <svg className="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -93,10 +143,13 @@ const AboutSection = () => {
                 <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-6">
-                We aim to be innovators in the STEM community, where Hispanic engineers and scientists lead with influence and innovation. We envision a world where our members are not only equipped to solve complex problems but are also leaders in advancing technological and scientific literacy on a global scale.
+                To be innovators in the STEM community where Hispanic engineers and scientists lead with influence, solving complex problems and advancing global technological and scientific literacy.
               </p>
               <div className="flex justify-end">
-                <button className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center">
+                <button
+                  className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center cursor-pointer hover:underline transition"
+                  onClick={() => setOpenModal('vision')}
+                >
                   Learn more
                   <svg className="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -165,10 +218,18 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
+
+      <Modal isOpen={openModal === 'mission'} onClose={() => setOpenModal(null)}>
+        <h2 className="text-xl font-bold mb-4">Our Mission</h2>
+        <p>More details about the mission...</p>
+      </Modal>
+      <Modal isOpen={openModal === 'vision'} onClose={() => setOpenModal(null)}>
+        <h2 className="text-xl font-bold mb-4">Our Vision</h2>
+        <p>More details about the vision...</p>
+      </Modal>
     </section>
   );
 };
