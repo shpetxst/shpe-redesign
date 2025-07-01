@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import EventsSection from './components/EventsSection';
 import AboutSection from './components/AboutSection';
-import MembershipSection from './components/MembershipSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -17,7 +16,6 @@ function App() {
           <Hero />
           <EventsSection />
           <AboutSection />
-          <MembershipSection />
           <ContactSection />
         </main>
         <Footer />
