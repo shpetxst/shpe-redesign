@@ -1,8 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSectionNavigation = (sectionId: string) => {
+    if (location.pathname === '/') {
+      // Already on homepage, just scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to homepage first, then scroll to section
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <footer className="bg-gray-900">
       <div className="container mx-auto px-4 py-12">
@@ -45,16 +67,36 @@ const Footer = () => {
               <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
+                  <button 
+                    onClick={() => navigate('/')}
+                    className="text-gray-400 hover:text-white transition-colors text-left"
+                  >
+                    Home
+                  </button>
                 </li>
                 <li>
-                  <a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a>
+                  <button 
+                    onClick={() => handleSectionNavigation('about')}
+                    className="text-gray-400 hover:text-white transition-colors text-left"
+                  >
+                    About Us
+                  </button>
                 </li>
                 <li>
-                  <a href="#events" className="text-gray-400 hover:text-white transition-colors">Events</a>
+                  <button 
+                    onClick={() => handleSectionNavigation('events')}
+                    className="text-gray-400 hover:text-white transition-colors text-left"
+                  >
+                    Events
+                  </button>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+                  <button 
+                    onClick={() => handleSectionNavigation('contact')}
+                    className="text-gray-400 hover:text-white transition-colors text-left"
+                  >
+                    Contact
+                  </button>
                 </li>
               </ul>
             </div>
