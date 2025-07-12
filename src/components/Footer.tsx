@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <Logo color="#ffffff" />
+            <Logo />
             <p className="text-gray-400 mt-4">
               Empowering Hispanic engineers to realize their fullest potential through academic excellence, professional development, and leadership.
             </p>
@@ -44,7 +45,7 @@ const Footer = () => {
               <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a>
+                  <Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
                 </li>
                 <li>
                   <a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a>
@@ -62,20 +63,17 @@ const Footer = () => {
               <h3 className="text-white text-lg font-semibold mb-4">Programs</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">SHPEtinas</a>
+                  <Link to="/programs/shpetinas" className="text-gray-400 hover:text-white transition-colors">SHPEtinas</Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Professional Development</a>
+                  <Link to="/programs/athletics" className="text-gray-400 hover:text-white transition-colors">Athletics</Link>
                 </li>
                 <li>
+                  <Link to="/programs/merits" className="text-gray-400 hover:text-white transition-colors">Merits</Link>
+                </li>
+                {/* <li>
                   <a href="#" className="text-gray-400 hover:text-white transition-colors">Mentorship</a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Athletics</a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Community Service</a>
-                </li>
+                </li> */}
               </ul>
             </div>
             
@@ -83,16 +81,19 @@ const Footer = () => {
               <h3 className="text-white text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">SHPE National</a>
+                  <a href="https://shpe.org/" target='_blank' rel="noreferrer noopener" className="text-gray-400 hover:text-white transition-colors">SHPE National</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Scholarships</a>
+                  <a href="https://shpe.org/engage/programs/scholarshpe/"  target='_blank' rel="noreferrer noopener" className="text-gray-400 hover:text-white transition-colors">ScholarSHPE</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Career Resources</a>
+                  <a href="https://www.engineering.txst.edu/current-students/scholarships-by-isoe.html"  target='_blank' rel="noreferrer noopener" className="text-gray-400 hover:text-white transition-colors">TXST Ingram Scholarships</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Newsletter</a>
+                  <a href="https://careercenter.shpe.org/" target='_blank' rel="noreferrer noopener" className="text-gray-400 hover:text-white transition-colors">Career Resources</a>
+                </li>
+                <li>
+                  <a href="https://shpe.org/about-shpe/news/" target='_blank' rel="noreferrer noopener" className="text-gray-400 hover:text-white transition-colors">SHPE News</a>
                 </li>
               </ul>
             </div>
