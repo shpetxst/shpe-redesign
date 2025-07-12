@@ -94,17 +94,17 @@ const AboutSection = () => {
                   <path d="M9.352 4C4.456 4 2 7.456 2 11.352v16.256c0 0.8 0.8 1.6 1.6 1.6h8c0.8 0 1.6-0.8 1.6-1.6v-8c0-0.8-0.8-1.6-1.6-1.6h-3.2v-0.8c0-1.6 1.6-3.2 3.2-3.2h1.6c0.8 0 1.6-0.8 1.6-1.6v-6.4c0-0.8-0.8-1.6-1.6-1.6h-1.6z M23.2 4c-4.8 0-7.2 3.456-7.2 7.352v16.256c0 0.8 0.8 1.6 1.6 1.6h8c0.8 0 1.6-0.8 1.6-1.6v-8c0-0.8-0.8-1.6-1.6-1.6h-3.2v-0.8c0-1.6 1.6-3.2 3.2-3.2h1.6c0.8 0 1.6-0.8 1.6-1.6v-6.4c0-0.8-0.8-1.6-1.6-1.6h-1.6z" />
                 </svg>
                 <p className="text-xl md:text-2xl font-medium text-white mb-6 leading-relaxed">
-                  Maresa's statement here
+                SHPE has been one of the most meaningful parts of my journey as a Hispanic engineering student. It’s not only helped me develop professionally and as a leader, but it’s also given me something even more valuable; a second familia. Through SHPE, I’ve watched our members grow, gain confidence, and achieve goals they once thought were out of reach. I’ve seen lives change, including my own. I truly believe SHPE will continue to empower and uplift our community. And if there’s one thing I know for sure, you’ll never walk this journey alone. SHPE will be there, guiding you, believing in you, and standing by you every step of the way.
                 </p>
                 <div>
-                  <p className="text-white font-semibold">Maresa Castañeda</p>
+                  <p className="text-white font-semibold">Maresa Castañeda, President</p>
                   <p className="text-primary-200">Industrial Engeineering, Class of 2026</p>
                 </div>
               </div>
             </div>
             <div className="hidden md:block relative">
               <img
-                src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="public/assets/images/mar-accentJPEG.JPEG"
                 alt="Statement from our president"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -224,11 +224,11 @@ const AboutSection = () => {
 
       <Modal isOpen={openModal === 'mission'} onClose={() => setOpenModal(null)}>
         <h2 className="text-xl font-bold mb-4">Our Mission</h2>
-        <p>More details about the mission...</p>
+        <p>At Texas State SHPE, we empower Hispanic students to excel in STEM by promoting education, innovation, and professional growth. <br /><br />In alignment with the College of Science and Engineering, we foster an inclusive environment of familia where students gain the skills and knowledge necessary for successful careers in science, technology, engineering, and mathematics, while addressing both regional and global challenges through innovation and research</p>
       </Modal>
       <Modal isOpen={openModal === 'vision'} onClose={() => setOpenModal(null)}>
         <h2 className="text-xl font-bold mb-4">Our Vision</h2>
-        <p>More details about the vision...</p>
+        <p>We aim to be a cornerstone in the STEM community, where Hispanic engineers and scientists lead with influence and innovation.<br /><br /> We envision a world where our members are not only equipped to solve complex problems but are also leaders in advancing technological and scientific literacy on a global scale.</p>
       </Modal>
     </section>
   );
