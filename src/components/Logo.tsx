@@ -1,27 +1,37 @@
 import React from 'react';
 
 interface LogoProps {
-  imagePath: string;
   width?: number;
   height?: number;
   className?: string;
+  isScrolled?: boolean;
 }
 
 const Logo: React.FC<LogoProps> = ({ 
-  imagePath = "/assets/icons/SHPE_logo_horiz_Texas State_KO.png", 
   width = 240, 
   height = 240,
-  className = ''
+  className = '',
+  isScrolled = false
 }) => {
+  const scrolledImage = "/assets/icons/SHPE_logo_horiz_Texas State_CMYK.jpg";
+  const defaultImage = "/assets/icons/SHPE_logo_horiz_Texas State_KO.png";
+
   return (
     <div className="flex items-center space-x-2">
-      <div className="flex items-center">
+      <div className="flex items-center relative">
         <img 
-          src={imagePath}
+          src={defaultImage}
           alt="SHPE Logo"
           width={width}
           height={height}
-          className={className}
+          className={`absolute transition-opacity duration-300 ${isScrolled ? 'opacity-0' : 'opacity-100'} ${className}`}
+        />
+        <img 
+          src={scrolledImage}
+          alt="SHPE Logo"
+          width={width}
+          height={height}
+          className={`transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'} ${className}`}
         />
       </div>
     </div>

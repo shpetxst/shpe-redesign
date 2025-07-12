@@ -43,7 +43,9 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Logo color={isScrolled ? '#76232F' : 'white'} />
+        <Logo
+          isScrolled={isScrolled}
+        />
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
