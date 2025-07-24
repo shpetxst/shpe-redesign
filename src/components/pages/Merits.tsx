@@ -16,11 +16,13 @@ const Merits = () => {
             </div>
             <div className="lg:text-right">
               <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="w-64 h-40 bg-primary-500/30 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <Award className="h-12 w-12 mx-auto mb-2 text-white/80" />
-                    <p className="text-white/80 text-sm">Excellence Recognition</p>
-                  </div>
+              <div className="w-96 h-60 bg-primary-500/30 rounded-lg overflow-hidden flex items-center justify-center p-0">
+                  <img
+                    src="/assets/images/Merits_page/IMG_5359.JPG"
+                    alt="Seniors Group Photo"
+                    className="w-full h-full object-contain bg-primary-500/30"
+                    style={{ display: 'block' }}
+                  />
                 </div>
               </div>
             </div>
@@ -82,38 +84,46 @@ const Merits = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Achievement Highlights</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-amber-50 rounded-lg p-6 text-center">
-              <div className="w-full h-32 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Award className="h-8 w-8 mx-auto mb-2 text-amber-600" />
-                  <p className="text-amber-600 text-sm">Academic Awards</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/Merits_page/IMG_5364.JPG"
+                  alt="Spring 2025 Merit Winners Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Recognizing outstanding GPA and academic achievements</p>
             </div>
             <div className="bg-blue-50 rounded-lg p-6 text-center">
-              <div className="w-full h-32 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Users className="h-8 w-8 mx-auto mb-2 text-blue-600" />
-                  <p className="text-blue-600 text-sm">Leadership Excellence</p>
-                </div>
+            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/Merits_page/IMG_1482.jpeg"
+                  alt="Fall 2024 Merit Winners Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Celebrating exceptional leadership contributions</p>
             </div>
             <div className="bg-green-50 rounded-lg p-6 text-center">
-              <div className="w-full h-32 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Target className="h-8 w-8 mx-auto mb-2 text-green-600" />
-                  <p className="text-green-600 text-sm">Service Impact</p>
-                </div>
+            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/Merits_page/IMG_2966.jpg"
+                  alt="Volunteering Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Honoring community service and volunteer work</p>
             </div>
             <div className="bg-purple-50 rounded-lg p-6 text-center">
-              <div className="w-full h-32 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <TrendingUp className="h-8 w-8 mx-auto mb-2 text-purple-600" />
-                  <p className="text-purple-600 text-sm">Professional Growth</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/Merits_page/IMG_2968.jpeg"
+                  alt="Intel Visit Group Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Advancing careers and professional development</p>
             </div>
@@ -221,11 +231,13 @@ const Merits = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <div className="w-full h-40 bg-primary-100 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <Award className="h-10 w-10 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Achievement Awaits</p>
-                </div>
+            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/Merits_page/IMG_5262.JPG"
+                  alt="Dell Visit Group Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
             </div>
           </div>

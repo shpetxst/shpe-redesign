@@ -16,11 +16,13 @@ const SHPEtinas = () => {
             </div>
             <div className="lg:text-right">
               <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="w-64 h-40 bg-primary-500/30 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <Users className="h-12 w-12 mx-auto mb-2 text-white/80" />
-                    <p className="text-white/80 text-sm">SHPEtinas Group Photo</p>
-                  </div>
+                <div className="w-96 h-60 bg-primary-500/30 rounded-lg overflow-hidden flex items-center justify-center p-0">
+                  <img
+                    src="/assets/images/SHPEtinas_events/IMG_2962.jpeg"
+                    alt="SHPEtinas Group Photo"
+                    className="w-full h-full object-contain bg-primary-500/30"
+                    style={{ display: 'block' }}
+                  />
                 </div>
               </div>
             </div>
@@ -81,29 +83,36 @@ const SHPEtinas = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">SHPEtinas in Action</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-100 rounded-lg p-6 text-center">
-              <div className="w-full h-48 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Users className="h-8 w-8 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Mentorship Sessions</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/SHPEtinas_events/IMG_7301.JPG"
+                  alt="SHPEtinas Conference Group Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
+              <p className="text-primary-600 text-sm">Mentorship Sessions</p>
               <p className="text-gray-700 text-sm">Monthly mentorship meetings connecting students with industry professionals</p>
             </div>
             <div className="bg-gray-100 rounded-lg p-6 text-center">
-              <div className="w-full h-48 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Award className="h-8 w-8 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Achievement Awards</p>
-                </div>
+            <div className="w-full h-48 bg-primary-100 overflow-hidden rounded-lg flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/SHPEtinas_events/IMG_8469.jpg"
+                  alt="Member Spotlight"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Celebrating academic excellence and leadership achievements</p>
             </div>
             <div className="bg-gray-100 rounded-lg p-6 text-center">
-              <div className="w-full h-48 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Heart className="h-8 w-8 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Sisterhood Events</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 overflow-hidden rounded-lg flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/SHPEtinas_events/IMG_2971.jpg"
+                  alt="SHPEtinas Conference Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Building strong bonds through social and professional events</p>
             </div>
@@ -120,11 +129,13 @@ const SHPEtinas = () => {
               </p>
             </div>
             <div className="bg-primary-50 rounded-lg p-6">
-              <div className="w-full h-48 bg-primary-200 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <Users className="h-12 w-12 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Leadership Development</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 overflow-hidden rounded-lg flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/SHPEtinas_events/IMG_7303.JPG"
+                  alt="SHPEtinas Group Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
             </div>
           </div>
@@ -178,11 +189,13 @@ const SHPEtinas = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <div className="w-full h-40 bg-primary-100 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <Heart className="h-10 w-10 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Join Our Community</p>
-                </div>
+            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                <img
+                  src="/assets/images/SHPEtinas_events/IMG_7298.JPG"
+                  alt="SHPEtinas Conference Sitting Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
             </div>
           </div>

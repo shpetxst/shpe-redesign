@@ -16,11 +16,13 @@ const Athletics = () => {
             </div>
             <div className="lg:text-right">
               <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="w-64 h-40 bg-primary-500/30 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <Trophy className="h-12 w-12 mx-auto mb-2 text-white/80" />
-                    <p className="text-white/80 text-sm">SHPE Athletics Team</p>
-                  </div>
+                <div className="w-96 h-60 bg-primary-500/30 rounded-lg overflow-hidden flex items-center justify-center p-0">
+                  <img
+                    src="/assets/images/Athletics_gallery/IMG_2972.jpg"
+                    alt="SHPEtinas Group Photo"
+                    className="w-full h-full object-contain bg-primary-500/30"
+                    style={{ display: 'block' }}
+                  />
                 </div>
               </div>
             </div>
@@ -82,38 +84,46 @@ const Athletics = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Sports in Action</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gray-100 rounded-lg p-4 text-center">
-              <div className="w-full h-32 bg-primary-100 rounded-lg flex items-center justify-center mb-3">
-                <div className="text-center">
-                  <Trophy className="h-6 w-6 mx-auto mb-1 text-primary-600" />
-                  <p className="text-primary-600 text-xs">Soccer</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
+                <img
+                  src="/assets/images/Athletics_gallery/IMG_2969.jpg"
+                  alt="Athletics Spring Lonestar Action Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Intramural teams & pickup games</p>
             </div>
             <div className="bg-gray-100 rounded-lg p-4 text-center">
-              <div className="w-full h-32 bg-primary-100 rounded-lg flex items-center justify-center mb-3">
-                <div className="text-center">
-                  <Trophy className="h-6 w-6 mx-auto mb-1 text-primary-600" />
-                  <p className="text-primary-600 text-xs">Basketball</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
+                <img
+                  src="/assets/images/Athletics_gallery/IMG_9084.jpg"
+                  alt=" Athletics Fall Lonestar Action Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">League play & tournaments</p>
             </div>
             <div className="bg-gray-100 rounded-lg p-4 text-center">
-              <div className="w-full h-32 bg-primary-100 rounded-lg flex items-center justify-center mb-3">
-                <div className="text-center">
-                  <Trophy className="h-6 w-6 mx-auto mb-1 text-primary-600" />
-                  <p className="text-primary-600 text-xs">Volleyball</p>
-                </div>
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
+                <img
+                  src="/assets/images/Athletics_gallery/IMG_0559.jpg"
+                  alt="Volleyball Action Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Indoor & outdoor activities</p>
             </div>
             <div className="bg-gray-100 rounded-lg p-4 text-center">
-              <div className="w-full h-32 bg-primary-100 rounded-lg flex items-center justify-center mb-3">
-                <div className="text-center">
-                  <Trophy className="h-6 w-6 mx-auto mb-1 text-primary-600" />
-                  <p className="text-primary-600 text-xs">Football</p>
-                </div>
+            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-3">
+                <img
+                  src="/assets/images/Athletics_gallery/IMG_2974.jpg"
+                  alt="Athletics Fall Lonestar Action Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm">Seasonal flag football</p>
             </div>
@@ -147,11 +157,13 @@ const Athletics = () => {
               </div>
             </div>
             <div className="bg-primary-50 rounded-lg p-6">
-              <div className="w-full h-48 bg-primary-200 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Users className="h-12 w-12 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Team Sports Action</p>
-                </div>
+            <div className="w-3/4 h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-3 mx-auto">
+                <img
+                  src="/assets/images/Athletics_gallery/IMG_7292.jpg"
+                  alt="Athletics Group Photo"
+                  className="w-full h-full object-cover"
+                  style={{ display: 'block' }}
+                />
               </div>
               <p className="text-gray-700 text-sm text-center">Building teamwork and camaraderie through athletic competition</p>
             </div>
@@ -206,11 +218,13 @@ const Athletics = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <div className="w-full h-40 bg-primary-100 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <Trophy className="h-10 w-10 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Join the Team</p>
-                </div>
+            <div className="w-3/4 h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-3 mx-auto">
+                <img
+                  src="/assets/images/Athletics_gallery/IMG_2531.JPG"
+                  alt="Athletics Lonestar Action Photo"
+                  className="max-w-full h-auto object-contain"
+                  style={{ display: 'block' }}
+                />
               </div>
             </div>
           </div>
