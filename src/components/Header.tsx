@@ -85,7 +85,11 @@ const Header = ({ page }: HeaderProps) => {
               {item.submenu ? (
                 <div className="relative">
                   <span 
-                    className={`font-medium text-sm group-hover:text-primary-600 transition-colors cursor-pointer ${textColor}`}
+                    className={`font-medium text-sm transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
+                      isOfficersPage || isScrolled 
+                        ? 'hover:bg-primary-50 hover:text-primary-700' 
+                        : 'hover:bg-white/20 hover:text-white'
+                    } ${textColor}`}
                   >
                     <div className="flex items-center">
                       {item.name}
@@ -108,14 +112,22 @@ const Header = ({ page }: HeaderProps) => {
               ) : item.isContact ? (
                 <button 
                   onClick={handleContactClick}
-                  className={`font-medium text-sm hover:text-primary-600 transition-colors ${textColor}`}
+                  className={`font-medium text-sm transition-all duration-200 px-3 py-2 rounded-md ${
+                    isOfficersPage || isScrolled 
+                      ? 'hover:bg-primary-50 hover:text-primary-700' 
+                      : 'hover:bg-white/20 hover:text-white'
+                  } ${textColor}`}
                 >
                   {item.name}
                 </button>
               ) : (
                 <Link 
                   to={item.href}
-                  className={`font-medium text-sm hover:text-primary-600 transition-colors ${textColor}`}
+                  className={`font-medium text-sm transition-all duration-200 px-3 py-2 rounded-md ${
+                    isOfficersPage || isScrolled 
+                      ? 'hover:bg-primary-50 hover:text-primary-700' 
+                      : 'hover:bg-white/20 hover:text-white'
+                  } ${textColor}`}
                 >
                   {item.name}
                 </Link>
