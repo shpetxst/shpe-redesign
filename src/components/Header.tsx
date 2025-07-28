@@ -83,32 +83,33 @@ const Header = ({ page }: HeaderProps) => {
           {menuItems.map((item) => (
             <div key={item.name} className="relative group">
               {item.submenu ? (
-                <div className="relative">
-                  <span 
-                    className={`font-medium text-sm transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
-                      isOfficersPage || isScrolled 
-                        ? 'hover:bg-primary-50 hover:text-primary-700' 
-                        : 'hover:bg-white/20 hover:text-white'
-                    } ${textColor}`}
-                  >
-                    <div className="flex items-center">
-                      {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
-                    </div>
-                  </span>
-                  
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    {item.submenu.map((subitem) => (
-                      <Link
-                        key={subitem.name}
-                        to={subitem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700"
-                      >
-                        {subitem.name}
-                      </Link>
-                    ))}
-                  </div>
+                <>
+                {/* Dropdown trigger */}
+                <button
+                  type="button"
+                  className={`inline-flex items-center font-medium text-sm transition-colors duration-200 cursor-pointer px-3 py-2 rounded-md ${
+                    isOfficersPage || isScrolled
+                      ? 'hover:bg-primary-50 hover:text-primary-700'
+                      : 'hover:bg-white/20 hover:text-white'
+                  } ${textColor}`}
+                >
+                  {item.name}
+                  <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
+                </button>
+
+                {/* Dropdown menu */}
+                <div className="absolute left-0 top-full mt-1 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 bg-white rounded-md shadow-lg py-1">
+                  {item.submenu.map((subitem) => (
+                    <Link
+                      key={subitem.name}
+                      to={subitem.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700"
+                    >
+                      {subitem.name}
+                    </Link>
+                  ))}
                 </div>
+                </>
               ) : item.isContact ? (
                 <button 
                   onClick={handleContactClick}

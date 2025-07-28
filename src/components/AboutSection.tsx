@@ -104,7 +104,7 @@ const AboutSection = () => {
             </div>
             <div className="hidden md:block relative">
               <img
-                src="public/assets/images/mar-accentJPEG.JPEG"
+                src="public/assets/images/mar-accent.jpeg"
                 alt="Statement from our president"
                 className="absolute inset-0 h-full w-full object-cover"
               />
