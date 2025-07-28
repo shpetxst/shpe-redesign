@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import { officers, Officer } from "../officers";
 
-const OfficerCard = ({ officer }: { officer: Officer }) => {
-  const [flipped, setFlipped] = useState(false);
-
+const OfficerCard = ({ 
+  officer, 
+  isFlipped, 
+  onFlip 
+}: { 
+  officer: Officer;
+  isFlipped: boolean;
+  onFlip: () => void;
+}) => {
   return (
     <div
       className="relative w-full h-72 cursor-pointer perspective"
-      onClick={() => setFlipped((f) => !f)}
+      onClick={onFlip}
       tabIndex={0}
-      onKeyPress={e => { if (e.key === "Enter") setFlipped(f => !f); }}
+      onKeyPress={e => { if (e.key === "Enter") onFlip(); }}
     >
-      <div className={`transition-transform duration-500 w-full h-full absolute top-0 left-0 ${flipped ? "rotate-y-180" : ""}`} style={{ transformStyle: "preserve-3d" }}>
+      <div className={`transition-transform duration-500 w-full h-full absolute top-0 left-0 ${isFlipped ? "rotate-y-180" : ""}`} style={{ transformStyle: "preserve-3d" }}>
         {/* Front */}
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center w-full h-full backface-hidden">
           <img
@@ -44,8 +50,15 @@ const OfficerCard = ({ officer }: { officer: Officer }) => {
 };
 
 const Officers = () => {
+  const [flippedOfficer, setFlippedOfficer] = useState<string | null>(null);
+  
   const executiveBoard = officers.filter(o => o.group === "Executive Board");
   const boardOfDirectors = officers.filter(o => o.group === "Board of Directors");
+
+  const handleCardFlip = (officerName: string) => {
+    // If the same card is clicked, unflip it. Otherwise, flip the new card and unflip the previous one
+    setFlippedOfficer(flippedOfficer === officerName ? null : officerName);
+  };
 
   return (
     <section className="py-20 bg-gray-50">
@@ -76,8 +89,13 @@ const Officers = () => {
           Executive Board
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {executiveBoard.map((officer, index) => (
-            <OfficerCard key={officer.name} officer={officer} />
+          {executiveBoard.map((officer) => (
+            <OfficerCard 
+              key={officer.name} 
+              officer={officer} 
+              isFlipped={flippedOfficer === officer.name}
+              onFlip={() => handleCardFlip(officer.name)}
+            />
           ))}
         </div>
       </div>
@@ -88,8 +106,13 @@ const Officers = () => {
           Board of Directors
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {boardOfDirectors.map((officer, index) => (
-            <OfficerCard key={officer.name} officer={officer} />
+          {boardOfDirectors.map((officer) => (
+            <OfficerCard 
+              key={officer.name} 
+              officer={officer} 
+              isFlipped={flippedOfficer === officer.name}
+              onFlip={() => handleCardFlip(officer.name)}
+            />
           ))}
         </div>
       </div>
