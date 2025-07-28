@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
-const Header = () => {
+interface HeaderProps {
+  page?: string;
+}
+
+const Header = ({ page }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -18,7 +22,7 @@ const Header = () => {
         { name: 'Merits', href: '/programs/merits' }
       ]
     },
-    { name: 'Officers', href: '#officers' },
+    { name: 'Officers', href: '/officers' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -35,18 +39,25 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Custom styling for Officers page
+  const isOfficersPage = page === 'officers';
+  const textColor = isOfficersPage 
+    ? 'text-gray-800' 
+    : (isScrolled ? 'text-gray-800' : 'text-white');
+  const bgColor = isOfficersPage 
+    ? 'bg-white shadow-md' 
+    : (isScrolled ? 'bg-white shadow-md' : 'bg-transparent');
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white shadow-md py-2' 
-          : 'bg-transparent py-4'
-      }`}
+        isOfficersPage ? bgColor : (isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4')
+      } ${isOfficersPage ? 'py-2' : ''}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/">
           <Logo
-            isScrolled={isScrolled}
+            isScrolled={isScrolled || isOfficersPage}
           />
         </Link>
         
@@ -57,9 +68,7 @@ const Header = () => {
               {item.submenu ? (
                 <div className="relative">
                   <span 
-                    className={`font-medium text-sm group-hover:text-primary-600 transition-colors cursor-pointer ${
-                      isScrolled ? 'text-gray-800' : 'text-white'
-                    }`}
+                    className={`font-medium text-sm group-hover:text-primary-600 transition-colors cursor-pointer ${textColor}`}
                   >
                     <div className="flex items-center">
                       {item.name}
@@ -82,9 +91,7 @@ const Header = () => {
               ) : (
                 <Link 
                   to={item.href}
-                  className={`font-medium text-sm hover:text-primary-600 transition-colors ${
-                    isScrolled ? 'text-gray-800' : 'text-white'
-                  }`}
+                  className={`font-medium text-sm hover:text-primary-600 transition-colors ${textColor}`}
                 >
                   {item.name}
                 </Link>
@@ -102,9 +109,9 @@ const Header = () => {
           className="md:hidden"
         >
           {mobileMenuOpen ? (
-            <X className={`h-6 w-6 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
+            <X className={`h-6 w-6 ${textColor}`} />
           ) : (
-            <Menu className={`h-6 w-6 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
+            <Menu className={`h-6 w-6 ${textColor}`} />
           )}
         </button>
       </div>
