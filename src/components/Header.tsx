@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
@@ -10,6 +10,23 @@ interface HeaderProps {
 const Header = ({ page }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    // Close mobile menu if open
+    setMobileMenuOpen(false);
+    
+    // Navigate to homepage
+    navigate('/');
+    
+    // Scroll to contact section after a brief delay to ensure page has loaded
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   const menuItems = [
     { name: 'Home', href: '/' },
@@ -23,7 +40,7 @@ const Header = ({ page }: HeaderProps) => {
       ]
     },
     { name: 'Officers', href: '/officers' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Contact', href: '#contact', isContact: true }
   ];
 
   useEffect(() => {
@@ -88,6 +105,13 @@ const Header = ({ page }: HeaderProps) => {
                     ))}
                   </div>
                 </div>
+              ) : item.isContact ? (
+                <button 
+                  onClick={handleContactClick}
+                  className={`font-medium text-sm hover:text-primary-600 transition-colors ${textColor}`}
+                >
+                  {item.name}
+                </button>
               ) : (
                 <Link 
                   to={item.href}
@@ -98,9 +122,9 @@ const Header = ({ page }: HeaderProps) => {
               )}
             </div>
           ))}
-          <button className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200">
+          {/* <button className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200">
             Join Us
-          </button>
+          </button> */}
         </nav>
         
         {/* Mobile Menu Button */}
@@ -122,12 +146,21 @@ const Header = ({ page }: HeaderProps) => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {menuItems.map((item) => (
               <React.Fragment key={item.name}>
-                <Link
-                  to={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-700 rounded-md"
-                >
-                  {item.name}
-                </Link>
+                {item.isContact ? (
+                  <button
+                    onClick={handleContactClick}
+                    className="block w-full text-left px-3 py-2 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-700 rounded-md"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-700 rounded-md"
+                  >
+                    {item.name}
+                  </Link>
+                )}
                 {item.submenu && item.submenu.map((subitem) => (
                   <Link
                     key={subitem.name}
