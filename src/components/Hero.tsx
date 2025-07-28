@@ -68,12 +68,18 @@ const Hero = () => {
             Empowering Hispanic engineers through academic excellence, professional development, and leadership opportunities.
           </p>
           <div className="space-x-4 opacity-0 animate-fade-in animation-delay-400">
-            <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+            <a
+              href="#contact"
+              className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block"
+            >
               Join Us
-            </button>
-            <button className="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300">
+            </a>
+            <a
+              href="#about"
+              className="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 inline-block"
+            >
               Learn More
-            </button>
+            </a>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in animation-delay-600">

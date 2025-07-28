@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
@@ -11,6 +11,7 @@ const Header = ({ page }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleContactClick = () => {
     // Close mobile menu if open
@@ -26,6 +27,23 @@ const Header = ({ page }: HeaderProps) => {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  // Handle clicking on the Home link or Logo
+  const handleHomeClick = () => {
+    // Close mobile menu if open
+    setMobileMenuOpen(false);
+
+    if (location.pathname === '/') {
+      // Already on homepage – just scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to homepage first, then scroll to top
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   const menuItems = [
@@ -72,7 +90,7 @@ const Header = ({ page }: HeaderProps) => {
       } ${isOfficersPage ? 'py-2' : ''}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/">
+        <Link to="/" onClick={handleHomeClick}>
           <Logo
             isScrolled={isScrolled || isOfficersPage}
           />
@@ -124,6 +142,7 @@ const Header = ({ page }: HeaderProps) => {
               ) : (
                 <Link 
                   to={item.href}
+                  onClick={item.name === 'Home' ? handleHomeClick : undefined}
                   className={`font-medium text-sm transition-all duration-200 px-3 py-2 rounded-md ${
                     isOfficersPage || isScrolled 
                       ? 'hover:bg-primary-50 hover:text-primary-700' 
@@ -169,6 +188,7 @@ const Header = ({ page }: HeaderProps) => {
                 ) : (
                   <Link
                     to={item.href}
+                    onClick={item.name === 'Home' ? handleHomeClick : undefined}
                     className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-primary-50 hover:text-primary-700 rounded-md"
                   >
                     {item.name}
