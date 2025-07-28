@@ -1,10 +1,67 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Award, Target, Users, TrendingUp } from 'lucide-react';
+import React, { useEffect } from 'react';
 
 const Merits = () => {
+  const meritCategories = [
+    { title: 'What is the merit board?', description: 'The SHPE Merit Leaderboard is our way of recognizing and rewarding active members who contribute to our chapter\'s success. The leaderboard will go off of a point system.' },
+    { title: 'What can I win after?', description: 'You could win exciting rewards like SHPE merchandise, gift cards, or special recognition at our events. It\'s our way of saying thank you for your dedication and hard work.' },
+    { title: 'How can I earn points?', description: 'You can earn points by attending meetings, volunteering, participating in events, and taking on leadership roles. The more involved you are, the higher your score will be on the leaderboard.' },
+    { title: 'How can I enter?', description: 'Every dues paying SHPE member is automatically enrolled! Just participate in chapter activities, and your points will be tracked. You can check your progress at every general meeting to see how you\'re doing.' },
+  ];
+
+  useEffect(() => {
+    const handleResize = (e: MessageEvent) => {
+      if (e.data && e.data.frameHeight) {
+        if (e.data.board_token === 'lb_mdnnos2t') {
+          const iframe = document.getElementById("iframe-lb_mdnnos2t") as HTMLIFrameElement | null;
+          if (iframe) {
+            iframe.style.height = `${e.data.frameHeight + 20}px`;
+          }
+        } else if (e.data.board_token === 'lb_mdnnxzh8') {
+          const iframe = document.getElementById("iframe-lb_mdnnxzh8") as HTMLIFrameElement | null;
+          if (iframe) {
+            iframe.style.height = `${e.data.frameHeight + 20}px`;
+          }
+        }
+      }
+    };
+    window.addEventListener("message", handleResize);
+    return () => {
+      window.removeEventListener("message", handleResize);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 animate-fade-in">
+      {/* Custom CSS for hiding scrollbars unless actively scrolling */}
+      <style>{`
+        .merit-iframe {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* Internet Explorer 10+ */
+        }
+        .merit-iframe::-webkit-scrollbar {
+          width: 0px;
+          background: transparent; /* Chrome/Safari/Webkit */
+        }
+        .merit-iframe:hover {
+          scrollbar-width: thin; /* Firefox */
+          -ms-overflow-style: auto; /* Internet Explorer 10+ */
+        }
+        .merit-iframe:hover::-webkit-scrollbar {
+          width: 8px;
+        }
+        .merit-iframe:hover::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        .merit-iframe:hover::-webkit-scrollbar-thumb {
+          background: #c1c1c1;
+          border-radius: 4px;
+        }
+        .merit-iframe:hover::-webkit-scrollbar-thumb:hover {
+          background: #a8a8a8;
+        }
+      `}</style>
+      
       <div className="bg-primary-600 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -16,7 +73,7 @@ const Merits = () => {
             </div>
             <div className="lg:text-right">
               <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="w-96 h-60 bg-primary-500/30 rounded-lg overflow-hidden flex items-center justify-center p-0">
+                <div className="w-96 h-60 bg-primary-500/30 rounded-lg overflow-hidden flex items-center justify-center p-0">
                   <img
                     src="/assets/images/Merits_page/IMG_5359.JPG"
                     alt="Seniors Group Photo"
@@ -31,51 +88,48 @@ const Merits = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">About SHPE Merits</h2>
-            <p className="text-lg text-gray-700 mb-6">
-              The SHPE Merits program is designed to recognize and reward outstanding contributions, achievements, 
-              and dedication within our organization. This comprehensive system motivates members to excel in 
-              academics, leadership, community service, and professional development.
-            </p>
-            <p className="text-lg text-gray-700 mb-6">
-              Through our merit system, we celebrate individual accomplishments while fostering a culture of 
-              continuous improvement and collective success.
-            </p>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Merit Categories</h3>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <Award className="h-6 w-6 text-primary-600 mr-3 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Academic Excellence</h4>
-                  <p className="text-gray-600">Recognition for outstanding academic performance</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Users className="h-6 w-6 text-primary-600 mr-3 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Leadership</h4>
-                  <p className="text-gray-600">Contributions to chapter leadership and initiatives</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Target className="h-6 w-6 text-primary-600 mr-3 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Community Service</h4>
-                  <p className="text-gray-600">Volunteer work and community engagement</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <TrendingUp className="h-6 w-6 text-primary-600 mr-3 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-gray-900">Professional Development</h4>
-                  <p className="text-gray-600">Career advancement and skill building activities</p>
-                </div>
+        {/* Merit Boards Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Merit Leaderboards</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* First TrackScore Embed */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="relative" style={{ overflow: 'hidden' }}>
+                <iframe
+                  id="iframe-lb_mdnnos2t"
+                  src="https://trackscore.online/embed/lb_mdnnos2t"
+                  className="merit-iframe"
+                  style={{ width: '100%', minHeight: '400px', border: 'none' }}
+                  scrolling="yes"
+                ></iframe>
               </div>
             </div>
+
+            {/* Second TrackScore Embed */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="relative" style={{ overflow: 'hidden' }}>
+                <iframe
+                  id="iframe-lb_mdnnxzh8"
+                  src="https://trackscore.online/embed/lb_mdnnxzh8"
+                  className="merit-iframe"
+                  style={{ width: '100%', minHeight: '400px', border: 'none' }}
+                  scrolling="yes"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Merit Information Section */}
+        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center text-primary-600">We want to reward our members, here's how.</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {meritCategories.map((category, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4 text-primary-600">{category.title}</h3>
+                <p className="text-gray-700">{category.description}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -95,7 +149,7 @@ const Merits = () => {
               <p className="text-gray-700 text-sm">Recognizing outstanding GPA and academic achievements</p>
             </div>
             <div className="bg-blue-50 rounded-lg p-6 text-center">
-            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
                 <img
                   src="/assets/images/Merits_page/IMG_1482.jpeg"
                   alt="Fall 2024 Merit Winners Photo"
@@ -106,7 +160,7 @@ const Merits = () => {
               <p className="text-gray-700 text-sm">Celebrating exceptional leadership contributions</p>
             </div>
             <div className="bg-green-50 rounded-lg p-6 text-center">
-            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
                 <img
                   src="/assets/images/Merits_page/IMG_2966.jpg"
                   alt="Volunteering Photo"
@@ -130,83 +184,6 @@ const Merits = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">How to Earn Merits</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Academic Achievement</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Maintain high GPA (3.0+)</li>
-                  <li>• Complete academic mentoring sessions</li>
-                  <li>• Present research or projects</li>
-                  <li>• Attend academic workshops</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Leadership & Service</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Hold officer positions</li>
-                  <li>• Lead committee initiatives</li>
-                  <li>• Organize chapter events</li>
-                  <li>• Mentor new members</li>
-                </ul>
-              </div>
-            </div>
-            <div className="bg-primary-50 rounded-lg p-6">
-              <div className="w-full h-48 bg-primary-200 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Award className="h-12 w-12 mx-auto mb-2 text-primary-600" />
-                  <p className="text-primary-600 text-sm">Merit Tracking System</p>
-                </div>
-              </div>
-              <p className="text-gray-700 text-sm text-center">Track your progress and achievements through our comprehensive merit system</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Merit Recognition Levels</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-amber-50 rounded-lg">
-              <div className="bg-amber-500 text-white rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Award className="h-8 w-8" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Bronze Level</h4>
-              <p className="text-gray-600 mb-4">25-49 Merit Points</p>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• Certificate of Recognition</li>
-                <li>• Chapter Newsletter Feature</li>
-                <li>• Priority Event Registration</li>
-              </ul>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="bg-gray-500 text-white rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Award className="h-8 w-8" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Silver Level</h4>
-              <p className="text-gray-600 mb-4">50-99 Merit Points</p>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• Bronze benefits plus</li>
-                <li>• Leadership opportunity preferences</li>
-                <li>• Scholarship application priority</li>
-              </ul>
-            </div>
-            <div className="text-center p-6 bg-yellow-50 rounded-lg">
-              <div className="bg-yellow-500 text-white rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Award className="h-8 w-8" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Gold Level</h4>
-              <p className="text-gray-600 mb-4">100+ Merit Points</p>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• All previous benefits plus</li>
-                <li>• Annual recognition ceremony</li>
-                <li>• Exclusive networking events</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <div className="bg-primary-50 rounded-lg p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Start Earning Merits Today</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -215,7 +192,7 @@ const Merits = () => {
                 Ready to be recognized for your achievements and contributions? Join our merit system and start earning 
                 points for your academic excellence, leadership, and community involvement.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   to="/contact" 
                   className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
@@ -228,10 +205,10 @@ const Merits = () => {
                 >
                   Back to Home
                 </Link>
-              </div>
+              </div> */}
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md">
-            <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+              <div className="w-full h-48 bg-primary-100 rounded-lg overflow-hidden flex items-center justify-center mb-4">
                 <img
                   src="/assets/images/Merits_page/IMG_5262.JPG"
                   alt="Dell Visit Group Photo"
