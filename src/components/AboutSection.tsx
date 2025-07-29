@@ -98,7 +98,7 @@ const AboutSection = () => {
                 </p>
                 <div>
                   <p className="text-white font-semibold">Maresa Castañeda, President</p>
-                  <p className="text-primary-200">Industrial Engeineering, Class of 2026</p>
+                  <p className="text-primary-200">Civil Engineering, Class of 2026</p>
                 </div>
               </div>
             </div>
