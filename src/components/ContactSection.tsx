@@ -76,7 +76,7 @@ const ContactSection = () => {
                     <div>
                       <h4 className="text-base font-semibold text-gray-900 mb-1">Meeting Times</h4>
                       <p className="text-gray-600">
-                        General Meetings: Every other Tuesday<br />
+                        General Meetings: Every other Wednesday<br />
                         6:30 PM - 7:30 PM (check the calendar for more info!)
                       </p>
                     </div>
