@@ -57,6 +57,7 @@ const Header = ({ page }: HeaderProps) => {
         { name: 'Merits', href: '/programs/merits' }
       ]
     },
+    { name: 'Store', href: '/payments' },
     { name: 'Officers', href: '/officers' },
     { name: 'Contact', href: '#contact', isContact: true }
   ];

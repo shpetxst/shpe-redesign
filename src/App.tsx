@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import SHPEtinas from './components/pages/SHPEtinas';
 import Athletics from './components/pages/Athletics';
 import Merits from './components/pages/Merits';
+import Payments from './components/pages/Payments';
 import Officers from "./components/Officers";
 
 // Home page component
@@ -40,6 +41,7 @@ const AppContent = () => {
         <Route path="/programs/shpetinas" element={<SHPEtinas />} />
         <Route path="/programs/athletics" element={<Athletics />} />
         <Route path="/programs/merits" element={<Merits />} />
+        <Route path="/payments" element={<Payments />} />
         <Route path="/officers" element={<Officers />} />
         <Route path="/contact" element={<ContactSection />} />
       </Routes>
