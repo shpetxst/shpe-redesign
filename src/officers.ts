@@ -28,7 +28,7 @@ export const officers: Officer[] = [
         image: "/assets/images/headshots/Edwin_headshot.jpg",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/edwinvazquez1/",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"To me, SHPE is where I found community, friendship, and growth both academically and professionally. I came in not knowing what SHPE was, but now I can’t imagine college without it; SHPE truly feels like my familia.\""
     },  
     {
         name: "Alberto Rodriguez",
@@ -37,7 +37,7 @@ export const officers: Officer[] = [
         position: "External Affairs",
         image: "/assets/images/headshots/alberto_headshot.JPG",
         group: "Executive Board",
-        linkedin: "https://www.linkedin.com/in/alberto-rodriguez0/",
+        linkedin: "https://www.linkedin.com/in/albertorodrigueztxst/",
         bio: "\"In SHPE, I found the tools to grow as a leader, the people to rise with as a community, and the purpose to keep pushing forward; not just for myself, but for those coming after me.\""
     },
     {
@@ -73,7 +73,7 @@ export const officers: Officer[] = [
     {
         name: "Linda Carillo",
         gradYear: "2027",
-        major: "Civil Engineering",
+        major: "Manufacturing Engineering",
         position: "Director of Events",
         image: "/assets/images/headshots/Linda_headshot.jpeg",
         group: "Board of Directors",
@@ -108,7 +108,7 @@ export const officers: Officer[] = [
         image: "/assets/images/headshots/Aiden_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/aiden-olivarez-81b5512ab/",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"I feel truly blessed to be apart of SHPE, a community that has welcomed me with open arms and connected me with others who share similar college experiences.\""
     },
     {
         name: "Yaneli Aguilar",
@@ -138,7 +138,7 @@ export const officers: Officer[] = [
         image: "/assets/images/headshots/Ivan_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/ivan-martinez-4068042b4/",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"For me, SHPE means uplifting and supporting one another out of a shared desire to make an impact for hispanics in STEM\""
     },
     {
         name: "Danielle Legarda",
@@ -158,7 +158,7 @@ export const officers: Officer[] = [
         image: "/assets/images/headshots/Santi_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/santiago-rubio-bolanos/",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"To me, SHPE is more than a professional organization .It’s a familia that empowers, supports, and pushes me to grow in every way.\""
     },
     {
         name: "Sarai Prieto",
@@ -168,17 +168,17 @@ export const officers: Officer[] = [
         image: "/assets/images/headshots/Sarai_headshot.jpeg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/michelle-alvarez-prieto-09089826a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"To me, SHPE means finding strength in community—being surrounded by people who understand my struggles and push me to become the version of myself I never thought I could be.\""
     },
     {
         name: "Ingrid Santos",
-        gradYear: "2027",
+        gradYear: "2028",
         major: "Civil Engineering",
         position: "SHPEtinas Assistant",
         image: "/assets/images/headshots/Ingrid_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/ingrid-santos-mederos-62960a308/",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"SHPE to me means learning how to empower my community and myself through Stem.\""
     },
     {
         name: "Angel Gonzalez",
@@ -187,8 +187,8 @@ export const officers: Officer[] = [
         position: "Membership Director",
         image: "/assets/images/headshots/Angel_headshot.jpg",
         group: "Board of Directors",
-        linkedin: "",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        linkedin: "https://www.linkedin.com/in/angel-gonzalez-350605337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        bio: "\To me, SHPE is a lot more than a professional organization! It feels like a family that empowers you to grow and helps embrace development as a leader.\""
     },
     {
         name: "Victoria Ramos",
@@ -203,12 +203,12 @@ export const officers: Officer[] = [
     {
         name: "Junior Segura",
         gradYear: "2026",
-        major: "Mechanical Engineering",
+        major: "Manufacturing Engineering",
         position: "Director of Information",
         image: "/assets/images/headshots/Junior_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/junior-segura-ontiveros-117a4a29a/",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"SHPE is a welcoming community and a home far from home full of opportunities to grow.\""
     }, 
     {
         name: "Aldo Guerrero",
@@ -217,7 +217,7 @@ export const officers: Officer[] = [
         position: "Chapter Development Director",
         image: "/assets/images/headshots/Aldo_headshot.jpeg",
         group: "Board of Directors",
-        linkedin: "https://www.linkedin.com/in/aldoguerrero1/",
+        linkedin: "https://www.linkedin.com/in/aldo-guerrero-75289a262/",
         bio: "\"SHPE is a reminder that a group of ambitious strangers can become a familia, and grow not only professionally, but personally as well. \""
     },
     {
@@ -227,7 +227,7 @@ export const officers: Officer[] = [
         position: "Fundraising Assistant",
         image: "/assets/images/headshots/Javi_headshot.JPG",
         group: "Board of Directors",
-        linkedin: "https://www.linkedin.com/in/javier-garcia-00000000000000000000000000000000/",
+        linkedin: "https://www.linkedin.com/in/javier-garcia-9478292b6/",
         bio: "\"SHPE means embracing a community where culture, resilience, and innovation come together to empower Latinos in STEM. It’s about lifting each other up and proving that our heritage is our strength.\""
     },
     {
@@ -238,7 +238,7 @@ export const officers: Officer[] = [
         image: "/assets/images/headshots/Alondra_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/alondra-chairez-632601330/",
-        bio: "\"SHPE has been a platform for me to grow as a leader and a professional. It's given me the opportunity to work with amazing people and make a positive impact on the community.\""
+        bio: "\"To me, SHPE means community and empowerment. As a Hispanic in STEM, being surrounded by people who understand my journey, and who uplift and guide me, has been incredibly meaningful.\""
     },
 ]
 
