@@ -30,68 +30,6 @@ interface CartItem {
   variant?: ProductVariant;
 }
 
-// Demo products - used when Shopify is not configured
-const DEMO_PRODUCTS: Product[] = [
-  {
-    id: '1',
-    title: 'SHPE Texas State T-Shirt',
-    description: 'Official SHPE Texas State chapter t-shirt. High-quality cotton blend with our logo.',
-    price: 25.00,
-    image: '/assets/icons/SHPE_logo_horiz_Texas State_KO.png',
-    category: 'merchandise',
-    inStock: true,
-    rating: 4.8,
-    variants: [
-      { id: '1-s', title: 'Small', price: 25.00, available: true },
-      { id: '1-m', title: 'Medium', price: 25.00, available: true },
-      { id: '1-l', title: 'Large', price: 25.00, available: true },
-      { id: '1-xl', title: 'X-Large', price: 27.00, available: true },
-    ]
-  },
-  {
-    id: '2',
-    title: 'SHPE Hoodie',
-    description: 'Comfortable hoodie perfect for those chilly Texas mornings. Features embroidered SHPE logo.',
-    price: 45.00,
-    image: '/assets/icons/SHPE_logo_horiz_Texas State_KO.png',
-    category: 'merchandise',
-    inStock: true,
-    rating: 4.9,
-    variants: [
-      { id: '2-s', title: 'Small', price: 45.00, available: true },
-      { id: '2-m', title: 'Medium', price: 45.00, available: true },
-      { id: '2-l', title: 'Large', price: 45.00, available: true },
-      { id: '2-xl', title: 'X-Large', price: 47.00, available: false },
-    ]
-  },
-  {
-    id: '3',
-    title: 'Annual Membership',
-    description: 'SHPE Texas State annual membership. Includes access to all events, networking opportunities, and more.',
-    price: 30.00,
-    image: '/assets/icons/SHPE_logo_horiz_Texas State_KO.png',
-    category: 'memberships',
-    inStock: true,
-    rating: 5.0,
-    variants: [
-      { id: '3-default', title: 'Standard', price: 30.00, available: true }
-    ]
-  },
-  {
-    id: '4',
-    title: 'National Convention Registration',
-    description: 'Register for the SHPE National Convention. Early bird pricing available for members.',
-    price: 150.00,
-    image: '/assets/icons/SHPE_logo_horiz_Texas State_KO.png',
-    category: 'events',
-    inStock: true,
-    rating: 4.7,
-    variants: [
-      { id: '4-default', title: 'General', price: 150.00, available: true }
-    ]
-  },
-];
-
 // Map Shopify objects to our UI model
 const mapCategoryFromShopify = (productType: string, tags: string[]): Product['category'] => {
   const type = (productType || '').toLowerCase();
@@ -103,19 +41,19 @@ const mapCategoryFromShopify = (productType: string, tags: string[]): Product['c
 
 const adaptShopifyProduct = (p: ShopifyProduct): Product => {
   const image = p.images && p.images.length > 0 ? p.images[0].src : '/assets/icons/logo.svg';
-  const variants: ProductVariant[] = (p.variants || []).map((v: any) => ({
+  const variants: ProductVariant[] = (p.variants || []).map((v) => ({
     id: v.id,
     title: v.title || 'Default',
-    price: parseFloat(typeof v.price === 'string' ? v.price : v.price.amount),
-    available: Boolean((v as any).available ?? true)
+    price: parseFloat(v.price.amount),
+    available: v.available
   }));
   return {
     id: p.id,
     title: p.title,
     description: p.description,
     image,
-    category: mapCategoryFromShopify((p as any).productType || '', (p as any).tags || []),
-    inStock: Boolean((p as any).availableForSale && variants.some(v => v.available)),
+    category: mapCategoryFromShopify(p.productType || '', p.tags || []),
+    inStock: Boolean(p.availableForSale && variants.some(v => v.available)),
     price: variants[0]?.price,
     variants
   };
@@ -128,7 +66,6 @@ const Payments = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [loading, setLoading] = useState(true);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
-  const [useShopifyProducts, setUseShopifyProducts] = useState(false);
 
   // Initialize Shopify data
   useEffect(() => {
@@ -141,9 +78,6 @@ const Payments = () => {
         if (shopifyProducts && shopifyProducts.length > 0) {
           const mapped = shopifyProducts.map(adaptShopifyProduct);
           setProducts(mapped);
-          setUseShopifyProducts(true);
-        } else {
-          setProducts(DEMO_PRODUCTS);
         }
 
         // Reuse or create checkout session
@@ -161,9 +95,6 @@ const Payments = () => {
         }
       } catch (error) {
         console.error('Failed to initialize Shopify:', error);
-        // Fall back to demo products
-        setUseShopifyProducts(false);
-        setProducts(DEMO_PRODUCTS);
       } finally {
         setLoading(false);
       }
@@ -290,17 +221,6 @@ const Payments = () => {
           </div>
         ) : (
           <>
-            {/* Status Banner */}
-            <div className="w-full mb-6">
-              <div className={`p-4 rounded-lg ${useShopifyProducts ? 'bg-green-50 border border-green-200' : 'bg-yellow-50 border border-yellow-200'}`}>
-                <p className={`text-sm ${useShopifyProducts ? 'text-green-800' : 'text-yellow-800'}`}>
-                  {useShopifyProducts 
-                    ? '✅ Connected to Shopify - Real products and checkout available'
-                    : '⚠️ Demo mode - Using sample products. Configure Shopify credentials for live functionality.'
-                  }
-                </p>
-              </div>
-            </div>
 
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Main Content */}
@@ -368,8 +288,8 @@ const Payments = () => {
                       </div>
                       
                       <button 
-                        onClick={useShopifyProducts ? handleShopifyCheckout : undefined}
-                        disabled={checkoutLoading || cart.length === 0 || !useShopifyProducts}
+                        onClick={handleShopifyCheckout}
+                        disabled={checkoutLoading || cart.length === 0}
                         className="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-400 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center"
                       >
                         {checkoutLoading ? (
@@ -380,7 +300,7 @@ const Payments = () => {
                         ) : (
                           <>
                             <CreditCard className="mr-2 h-5 w-5" />
-                            {useShopifyProducts ? 'Checkout with Shopify' : 'Checkout (Demo)'}
+                            {'Checkout with Shopify'}
                           </>
                         )}
                       </button>
@@ -484,7 +404,7 @@ const CartItemComponent: React.FC<{
   item: CartItem; 
   onUpdateQuantity: (productId: string, variantId: string | undefined, quantity: number) => void;
 }> = ({ item, onUpdateQuantity }) => {
-  const price = item.variant?.price || item.product.price;
+  const price: number = item.variant?.price ?? item.product.price ?? 0;
   
   return (
     <div className="flex items-center space-x-3 py-2">
