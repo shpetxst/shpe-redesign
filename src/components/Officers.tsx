@@ -75,7 +75,7 @@ const Officers = () => {
           </div>
           <div className="flex-1 flex items-center justify-center p-8">
             <img
-              src="/assets/images/headshots/Officers.jpg"
+              src="/assets/images/headshots/officers.jpg"
               alt="SHPE Officers"
               className="w-full h-full object-cover rounded-lg"
             />
