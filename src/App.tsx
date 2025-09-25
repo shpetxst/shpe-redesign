@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -53,6 +54,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <AppContent />
+      <Analytics />
     </Router>
   );
 }
