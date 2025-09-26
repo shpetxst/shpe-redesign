@@ -3,11 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
-interface HeaderProps {
-  page?: string;
-}
-
-const Header = ({ page }: HeaderProps) => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -75,7 +71,7 @@ const Header = ({ page }: HeaderProps) => {
   }, []);
 
   // Custom styling for Officers page
-  const isOfficersPage = page === 'officers';
+  const isOfficersPage = location.pathname === '/officers';
   const textColor = isOfficersPage 
     ? 'text-gray-800' 
     : (isScrolled ? 'text-gray-800' : 'text-white');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import EventsSection from './components/EventsSection';
@@ -24,19 +24,11 @@ const HomePage = () => (
   </main>
 );
 
-// AppContent component to use useLocation hook
+// AppContent component
 const AppContent = () => {
-  const location = useLocation();
-  
-  // Determine current page based on pathname
-  const getCurrentPage = () => {
-    if (location.pathname === '/officers') return 'officers';
-    return undefined;
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header page={getCurrentPage()} />
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/programs/shpetinas" element={<SHPEtinas />} />
