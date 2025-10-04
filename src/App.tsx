@@ -17,25 +17,25 @@ import Officers from "./components/Officers";
 // Sample carousel data - replace with actual sponsor/partner data
 const sponsors: CarouselItem[] = [
   {
-    image: '/public/assets/icons/logo.svg',
+    // image: '/assets/icons/logo.svg',
     title: 'Partner 1',
     subtitle: 'Supporting SHPE since 2020',
     alt: 'Partner 1 Logo'
   },
   {
-    image: '/public/assets/icons/logo.svg',
+    // image: '/assets/icons/logo.svg',
     title: 'Partner 2',
     subtitle: 'Empowering future engineers',
     alt: 'Partner 2 Logo'
   },
   {
-    image: '/public/assets/icons/logo.svg',
+    // image: '/assets/icons/logo.svg',
     title: 'Partner 3',
     subtitle: 'Committed to diversity in STEM',
     alt: 'Partner 3 Logo'
   },
   {
-    image: '/public/assets/icons/logo.svg',
+    // image: '/assets/icons/logo.svg',
     title: 'Partner 4',
     subtitle: 'Building tomorrow together',
     alt: 'Partner 4 Logo'

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { officers, Officer } from "../officers";
 
 const OfficerCard = ({ 

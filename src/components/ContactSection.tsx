@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Mail, Calendar, Instagram, Twitter, Linkedin, Briefcase, Users, GraduationCap, Award } from 'lucide-react';
 
 const MEMBERSHIP_BENEFITS = [

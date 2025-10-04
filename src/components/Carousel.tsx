@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 export interface CarouselItem {
-  image: string;
+  image?: string;
   title: string;
   subtitle: string;
   alt?: string;
@@ -16,6 +16,8 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ items, title, description }) => {
+  const defaultImage = '/assets/icons/logo.svg';
+  
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -63,7 +65,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title, description }) => {
               <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 h-full flex flex-col">
                 <div className="aspect-video w-full overflow-hidden bg-gray-100 flex items-center justify-center p-6">
                   <img
-                    src={item.image}
+                    src={item.image || defaultImage}
                     alt={item.alt || item.title}
                     className="max-w-full max-h-full object-contain"
                   />
