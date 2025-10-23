@@ -1,4 +1,4 @@
-// @ts-ignore - Type declarations issue with @splidejs/react-splide
+// @ts-expect-error - Type declarations issue with @splidejs/react-splide
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
