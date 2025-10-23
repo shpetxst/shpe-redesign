@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Mail, Calendar, Instagram, Twitter, Linkedin, Briefcase, Users, GraduationCap, Award } from 'lucide-react';
 
 const MEMBERSHIP_BENEFITS = [
@@ -83,7 +82,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 
-                <h4 className="text-lg font-semibold text-gray-900 mt-8 mb-4">Connect With Us</h4>
+                <h4 className="text-lg font-semibold text-gray-900 mt-8 mb-4">Connect with us on social media!</h4>
                 <div className="flex space-x-4">
                   <a href="https://www.instagram.com/shpe.txst/"  target='_blank' rel="noreferrer noopener" className="bg-primary-100 hover:bg-primary-200 text-primary-600 p-3 rounded-full transition-colors">
                     <Instagram className="h-5 w-5" />
@@ -99,7 +98,6 @@ const ContactSection = () => {
             </div>
           </div>
           
-          {/* Membership Benefits Boxes Only */}
           <div className="w-full lg:w-2/3 flex flex-col justify-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Membership Benefits</h3>
             <div className="space-y-6">
@@ -124,6 +122,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };
