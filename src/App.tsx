@@ -17,28 +17,32 @@ import Officers from "./components/Officers";
 // Sample carousel data - replace with actual sponsor/partner data
 const sponsors: CarouselItem[] = [
   {
-    // image: '/assets/icons/logo.svg',
-    title: 'Partner 1',
-    subtitle: 'Supporting SHPE since 2020',
-    alt: 'Partner 1 Logo'
+    image: '/assets/images/sponsors/dell.png',
+    title: 'Dell Technologies',
+    subtitle: 'Supporting SHPE since 20xx',
+    alt: 'Dell Technologies logo',
+    website: 'https://www.dell.com/'
   },
   {
-    // image: '/assets/icons/logo.svg',
-    title: 'Partner 2',
-    subtitle: 'Empowering future engineers',
-    alt: 'Partner 2 Logo'
+    image: '/assets/images/sponsors/UFCU.png',
+    title: 'UFCU',
+    subtitle: 'Supporting SHPE since 20xx',
+    alt: 'UFCU logo',
+    website: 'https://www.ufcu.org/'
   },
   {
-    // image: '/assets/icons/logo.svg',
-    title: 'Partner 3',
-    subtitle: 'Committed to diversity in STEM',
-    alt: 'Partner 3 Logo'
+    image: '/assets/images/sponsors/FNI_Logo_Blue_RGB.png',
+    title: 'Freese & Nichols',
+    subtitle: 'Supporting SHPE since 20xx',
+    alt: 'Freese and Nichols logo',
+    website: 'https://www.freese.com/'
   },
   {
-    // image: '/assets/icons/logo.svg',
-    title: 'Partner 4',
-    subtitle: 'Building tomorrow together',
-    alt: 'Partner 4 Logo'
+    image: '/assets/images/sponsors/lcra.png',
+    title: 'LCRA',
+    subtitle: 'Supporting SHPE since 20xx',
+    alt: 'LCRA logo',
+    website: 'https://www.lcra.org/'
   },
 ];
 

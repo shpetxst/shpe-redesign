@@ -7,6 +7,7 @@ export interface CarouselItem {
   title: string;
   subtitle: string;
   alt?: string;
+  website: string;
 }
 
 interface CarouselProps {
@@ -19,7 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title, description }) => {
   const defaultImage = '/assets/icons/logo.svg';
   
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="pt-28 pb-24 md:pt-32 md:pb-28 bg-gray-50">
       <div className="container mx-auto px-4">
         {title && (
           <div className="text-center mb-16">
@@ -61,24 +62,33 @@ const Carousel: React.FC<CarouselProps> = ({ items, title, description }) => {
           aria-label="Carousel"
         >
           {items.map((item, index) => (
-            <SplideSlide key={index}>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 h-full flex flex-col">
-                <div className="aspect-video w-full overflow-hidden bg-gray-100 flex items-center justify-center p-6">
-                  <img
-                    src={item.image || defaultImage}
-                    alt={item.alt || item.title}
-                    className="max-w-full max-h-full object-contain"
-                  />
+            <SplideSlide key={index} className="overflow-visible">
+              <a
+                href={item.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${item.title} website`}
+                title={`Visit ${item.title}`}
+                className="block h-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 rounded-xl relative hover:z-20 focus:z-20"
+              >
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 h-full flex flex-col">
+                  <div className="aspect-video w-full overflow-hidden bg-gray-100 flex items-center justify-center p-6">
+                    <img
+                      src={item.image || defaultImage}
+                      alt={item.alt || item.title}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                  <div className="p-6 flex-1 flex flex-col justify-center text-center">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {item.subtitle}
+                    </p>
+                  </div>
                 </div>
-                <div className="p-6 flex-1 flex flex-col justify-center text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {item.subtitle}
-                  </p>
-                </div>
-              </div>
+              </a>
             </SplideSlide>
           ))}
         </Splide>

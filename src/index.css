@@ -86,3 +86,10 @@ body {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* Allow Splide slides to visually overflow when scaled */
+.splide,
+.splide__track,
+.splide__list {
+  overflow: visible !important;
+}
