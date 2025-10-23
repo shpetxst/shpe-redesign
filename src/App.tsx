@@ -19,28 +19,28 @@ const sponsors: CarouselItem[] = [
   {
     image: '/assets/images/sponsors/dell.png',
     title: 'Dell Technologies',
-    subtitle: 'Supporting SHPE since 20xx',
+    subtitle: 'Supporting SHPE since 2022',
     alt: 'Dell Technologies logo',
     website: 'https://www.dell.com/'
   },
   {
     image: '/assets/images/sponsors/UFCU.png',
     title: 'UFCU',
-    subtitle: 'Supporting SHPE since 20xx',
+    subtitle: 'Supporting SHPE since 2025',
     alt: 'UFCU logo',
     website: 'https://www.ufcu.org/'
   },
   {
     image: '/assets/images/sponsors/FNI_Logo_Blue_RGB.png',
     title: 'Freese & Nichols',
-    subtitle: 'Supporting SHPE since 20xx',
+    subtitle: 'Supporting SHPE since 2025',
     alt: 'Freese and Nichols logo',
     website: 'https://www.freese.com/'
   },
   {
     image: '/assets/images/sponsors/lcra.png',
     title: 'LCRA',
-    subtitle: 'Supporting SHPE since 20xx',
+    subtitle: 'Supporting SHPE since 2025',
     alt: 'LCRA logo',
     website: 'https://www.lcra.org/'
   },
