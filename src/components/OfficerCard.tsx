@@ -1,4 +1,3 @@
-import React from "react";
 import { Officer } from "../officers"; // Adjust path if needed
 
 const OfficerCard = ({ officer }: { officer: Officer }) => (

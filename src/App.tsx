@@ -1,17 +1,50 @@
-import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import EventsSection from './components/EventsSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
+import Carousel, { CarouselItem } from './components/Carousel';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SHPEtinas from './components/pages/SHPEtinas';
 import Athletics from './components/pages/Athletics';
 import Merits from './components/pages/Merits';
 import Officers from "./components/Officers";
+
+// Sample carousel data - replace with actual sponsor/partner data
+const sponsors: CarouselItem[] = [
+  {
+    image: '/assets/images/sponsors/dell.png',
+    title: 'Dell Technologies',
+    subtitle: 'Supporting SHPE since 2022',
+    alt: 'Dell Technologies logo',
+    website: 'https://www.dell.com/'
+  },
+  {
+    image: '/assets/images/sponsors/UFCU.png',
+    title: 'UFCU',
+    subtitle: 'Supporting SHPE since 2025',
+    alt: 'UFCU logo',
+    website: 'https://www.ufcu.org/'
+  },
+  {
+    image: '/assets/images/sponsors/FNI_Logo_Blue_RGB.png',
+    title: 'Freese & Nichols',
+    subtitle: 'Supporting SHPE since 2025',
+    alt: 'Freese and Nichols logo',
+    website: 'https://www.freese.com/'
+  },
+  {
+    image: '/assets/images/sponsors/lcra.png',
+    title: 'LCRA',
+    subtitle: 'Supporting SHPE since 2025',
+    alt: 'LCRA logo',
+    website: 'https://www.lcra.org/'
+  },
+];
 
 // Home page component
 const HomePage = () => (
@@ -20,22 +53,19 @@ const HomePage = () => (
     <EventsSection />
     <AboutSection />
     <ContactSection />
+    <Carousel 
+      items={sponsors}
+      title="Thank you to our sponsors!"
+      description="We're grateful for the support of our partners who help us achieve our mission"
+    />
   </main>
 );
 
-// AppContent component to use useLocation hook
+// AppContent component
 const AppContent = () => {
-  const location = useLocation();
-  
-  // Determine current page based on pathname
-  const getCurrentPage = () => {
-    if (location.pathname === '/officers') return 'officers';
-    return undefined;
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header page={getCurrentPage()} />
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/programs/shpetinas" element={<SHPEtinas />} />
@@ -55,6 +85,7 @@ function App() {
       <ScrollToTop />
       <AppContent />
       <Analytics />
+      <SpeedInsights />
     </Router>
   );
 }
