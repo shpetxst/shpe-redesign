@@ -88,14 +88,15 @@ const Officers = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
           Executive Board
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {executiveBoard.map((officer) => (
-            <OfficerCard 
-              key={officer.name} 
-              officer={officer} 
-              isFlipped={flippedOfficer === officer.name}
-              onFlip={() => handleCardFlip(officer.name)}
-            />
+            <div key={officer.name} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] xl:w-[calc(25%-1.5rem)]">
+              <OfficerCard 
+                officer={officer} 
+                isFlipped={flippedOfficer === officer.name}
+                onFlip={() => handleCardFlip(officer.name)}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -105,14 +106,15 @@ const Officers = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
           Board of Directors
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {boardOfDirectors.map((officer) => (
-            <OfficerCard 
-              key={officer.name} 
-              officer={officer} 
-              isFlipped={flippedOfficer === officer.name}
-              onFlip={() => handleCardFlip(officer.name)}
-            />
+            <div key={officer.name} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] xl:w-[calc(25%-1.5rem)]">
+              <OfficerCard 
+                officer={officer} 
+                isFlipped={flippedOfficer === officer.name}
+                onFlip={() => handleCardFlip(officer.name)}
+              />
+            </div>
           ))}
         </div>
       </div>

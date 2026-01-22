@@ -131,14 +131,14 @@ export const officers: Officer[] = [
         bio: "\"To me, SHPE is proof that when you combine community, culture, and code, you compile innovation everyone can run with.\""
     },
     {
-        name: "Ivan Martinez",
-        gradYear: "2027",
-        major: "Electrical Engineering",
+        name: "Pierre Picazo",
+        gradYear: "2028",
+        major: "Mechanical Engineering",
         position: "Treasurer Assistant",
-        image: "/assets/images/headshots/ivan_headshot.jpg",
+        image: "/assets/images/headshots/bobcat.png",
         group: "Board of Directors",
-        linkedin: "https://www.linkedin.com/in/ivan-martinez-4068042b4/",
-        bio: "\"For me, SHPE means uplifting and supporting one another out of a shared desire to make an impact for hispanics in STEM\""
+        linkedin: "https://www.linkedin.com/in/pierre-picazo-2698633015342958bh/",
+        bio: "\"Familia to me means, A community that will help you achieve your goals by any means necessary.\""
     },
     {
         name: "Danielle Legarda",
@@ -149,16 +149,6 @@ export const officers: Officer[] = [
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/danielle-legarda/",
         bio: "\"To me, SHPE is where I found people who understand my goals, challenges, and background. It gave me the confidence to pursue engineering, grow as a leader, and feel supported by a family-like community.\""
-    },
-    {
-        name: "Santiago Bolanos",
-        gradYear: "2027",
-        major: "Computer Science",
-        position: "External Affairs Assistant",
-        image: "/assets/images/headshots/santi_headshot.jpg",
-        group: "Board of Directors",
-        linkedin: "https://www.linkedin.com/in/santiago-rubio-bolanos/",
-        bio: "\"To me, SHPE is more than a professional organization .It’s a familia that empowers, supports, and pushes me to grow in every way.\""
     },
     {
         name: "Sarai Prieto",
