@@ -70,25 +70,26 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Custom styling for Officers page
-  const isOfficersPage = location.pathname === '/officers';
-  const textColor = isOfficersPage 
+  // Custom styling for pages with rounded banner style (white background nav)
+  const whiteNavPages = ['/officers', '/programs/athletics', '/programs/merits', '/programs/shpetinas'];
+  const isWhiteNavPage = whiteNavPages.includes(location.pathname);
+  const textColor = isWhiteNavPage 
     ? 'text-gray-800' 
     : (isScrolled ? 'text-gray-800' : 'text-white');
-  const bgColor = isOfficersPage 
-    ? 'bg-white shadow-md' 
+  const bgColor = isWhiteNavPage 
+    ? (isScrolled ? 'bg-white shadow-md' : 'bg-white') 
     : (isScrolled ? 'bg-white shadow-md' : 'bg-transparent');
 
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isOfficersPage ? bgColor : (isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4')
-      } ${isOfficersPage ? 'py-2' : ''}`}
+        isWhiteNavPage ? bgColor : (isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4')
+      } ${isWhiteNavPage ? 'py-2' : ''}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" onClick={handleHomeClick}>
           <Logo
-            isScrolled={isScrolled || isOfficersPage}
+            isScrolled={isScrolled || isWhiteNavPage}
           />
         </Link>
         
@@ -102,7 +103,7 @@ const Header = () => {
                 <button
                   type="button"
                   className={`inline-flex items-center font-medium text-sm transition-colors duration-200 cursor-pointer px-3 py-2 rounded-md ${
-                    isOfficersPage || isScrolled
+                    isWhiteNavPage || isScrolled
                       ? 'hover:bg-primary-50 hover:text-primary-700'
                       : 'hover:bg-white/20 hover:text-white'
                   } ${textColor}`}
@@ -128,7 +129,7 @@ const Header = () => {
                 <button 
                   onClick={handleContactClick}
                   className={`font-medium text-sm transition-all duration-200 px-3 py-2 rounded-md ${
-                    isOfficersPage || isScrolled 
+                    isWhiteNavPage || isScrolled 
                       ? 'hover:bg-primary-50 hover:text-primary-700' 
                       : 'hover:bg-white/20 hover:text-white'
                   } ${textColor}`}
@@ -140,7 +141,7 @@ const Header = () => {
                   to={item.href}
                   onClick={item.name === 'Home' ? handleHomeClick : undefined}
                   className={`font-medium text-sm transition-all duration-200 px-3 py-2 rounded-md ${
-                    isOfficersPage || isScrolled 
+                    isWhiteNavPage || isScrolled 
                       ? 'hover:bg-primary-50 hover:text-primary-700' 
                       : 'hover:bg-white/20 hover:text-white'
                   } ${textColor}`}

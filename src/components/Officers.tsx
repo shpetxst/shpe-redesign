@@ -61,7 +61,7 @@ const Officers = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 animate-fade-in">
       {/* Banner Section */}
       <div className="container mx-auto px-4 mb-16">
         <div className="bg-primary-600 rounded-xl overflow-hidden flex flex-col md:flex-row h-64 md:h-80">

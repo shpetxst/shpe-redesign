@@ -62,27 +62,23 @@ const Merits = () => {
         }
       `}</style>
       
-      <div className="bg-primary-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">SHPE Merits</h1>
-              <p className="text-xl text-primary-100 max-w-3xl">
-                Recognizing excellence and fostering growth through our comprehensive merit and achievement system.
-              </p>
-            </div>
-            <div className="lg:text-right">
-              <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="w-96 h-60 bg-primary-500/30 rounded-lg overflow-hidden flex items-center justify-center p-0">
-                  <img
-                    src="/assets/images/Merits_page/IMG_5359.JPG"
-                    alt="Seniors Group Photo"
-                    className="w-full h-full object-contain bg-primary-500/30"
-                    style={{ display: 'block' }}
-                  />
-                </div>
-              </div>
-            </div>
+      {/* Banner Section */}
+      <div className="container mx-auto px-4 pt-20 mb-16">
+        <div className="bg-primary-600 rounded-xl overflow-hidden flex flex-col md:flex-row h-64 md:h-80">
+          <div className="flex-1 flex flex-col justify-center p-8 text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              SHPE Merits
+            </h1>
+            <p className="text-xl opacity-90">
+              Recognizing excellence and fostering growth through our comprehensive merit and achievement system.
+            </p>
+          </div>
+          <div className="flex-1 flex items-center justify-center p-8">
+            <img
+              src="/assets/images/Merits_page/IMG_5359.JPG"
+              alt="SHPE Merits"
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>
