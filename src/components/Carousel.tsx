@@ -1,5 +1,6 @@
 // @ts-expect-error - Type declarations issue with @splidejs/react-splide
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+// @ts-expect-error - no type declarations for css module
 import '@splidejs/react-splide/css';
 
 export interface CarouselItem {
@@ -20,7 +21,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title, description }) => {
   const defaultImage = '/assets/icons/logo.svg';
   
   return (
-    <section className="pt-28 pb-24 md:pt-32 md:pb-28 bg-gray-50">
+    <section className="pt-28 pb-24 md:pt-32 md:pb-28 bg-gray-50 overflow-x-hidden">
       <div className="container mx-auto px-4">
         {title && (
           <div className="text-center mb-16">
