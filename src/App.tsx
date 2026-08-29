@@ -32,7 +32,7 @@ const sponsors: CarouselItem[] = [
   },
   {
     image: '/assets/images/sponsors/Nvidia-Logo-Download-PNG-Image.png',
-    title: 'nvidia',
+    title: 'Nvidia',
     subtitle: 'Supporting SHPE since 2026',
     alt: 'Nvidia logo',
     website: 'https://www.nvidia.com/'
