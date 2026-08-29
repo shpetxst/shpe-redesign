@@ -21,7 +21,7 @@ export const officers: Officer[] = [
         bio: "\"SHPE means familia and growth. It's helped me form lifelong friendships and shaped my professional journey as an engineer.\""
     }, 
     {
-        name: "Edwin Vasquez",
+        name: "Haily Montenegro",
         gradYear: "2026",
         major: "Electrical Engineering",
         position: "Vice President",

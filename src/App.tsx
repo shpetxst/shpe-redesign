@@ -31,11 +31,11 @@ const sponsors: CarouselItem[] = [
     website: 'https://www.ufcu.org/'
   },
   {
-    image: '/assets/images/sponsors/FNI_Logo_Blue_RGB.png',
-    title: 'Freese & Nichols',
-    subtitle: 'Supporting SHPE since 2025',
-    alt: 'Freese and Nichols logo',
-    website: 'https://www.freese.com/'
+    image: '/assets/images/sponsors/Screenshot 2026-08-28 at 8.42.38 PM.png',
+    title: 'nvidia',
+    subtitle: 'Supporting SHPE since 2026',
+    alt: 'Nvidia logo',
+    website: 'https://www.nvidia.com/'
   },
   {
     image: '/assets/images/sponsors/lcra.png',
