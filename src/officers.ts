@@ -11,13 +11,13 @@ export interface Officer {
 
 export const officers: Officer[] = [
     {
-        name: "Maresa Castaneda",
-        gradYear: "2026",
+        name: "Victoria Ramos",
+        gradYear: "2028",
         major: "Civil Engineering",
         position: "President",
         image: "/assets/images/headshots/maresa_headshot.jpg",
         group: "Executive Board",
-        linkedin: "https://www.linkedin.com/in/maresa-castaneda/",
+        linkedin: "https://www.linkedin.com/in/victoria-ramos-96bb71418/?skipRedirect=true",
         bio: "\"SHPE means familia and growth. It's helped me form lifelong friendships and shaped my professional journey as an engineer.\""
     }, 
     {
@@ -31,27 +31,27 @@ export const officers: Officer[] = [
         bio: "\"To me, SHPE is where I found community, friendship, and growth both academically and professionally. I came in not knowing what SHPE was, but now I can’t imagine college without it; SHPE truly feels like my familia.\""
     },  
     {
-        name: "Alberto Rodriguez",
+        name: "Linda Carillo",
         gradYear: "2026",
         major: "Electrical Engineering",
-        position: "External Affairs",
+        position: "External Affairs Executive",
         image: "/assets/images/headshots/alberto_headshot.jpg",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/albertorodrigueztxst/",
         bio: "\"In SHPE, I found the tools to grow as a leader, the people to rise with as a community, and the purpose to keep pushing forward; not just for myself, but for those coming after me.\""
     },
     {
-        name: "Jimena Gonzalez",
+        name: "Lilly Gomez",
         gradYear: "2026",
         major: "Industrial Engineering",
-        position: "Internal Affairs",
+        position: "Internal Affairs Executive",
         image: "/assets/images/headshots/jimena_headshot.jpg",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/jimenagonzalez21/",
         bio: "\"SHPE means to me, turning dreams into action alongside people who understand my journey. It's a commitment to lift others as we rise together. \""
     },
     {
-        name: "Jorge Jimenez",
+        name: "Pierre Picazo",
         gradYear: "2026",
         major: "Computer Science",
         position: "Treasurer",
@@ -61,17 +61,17 @@ export const officers: Officer[] = [
         bio: "\"Through SHPE, I found mentors, friends, and a community that made me feel like I belong while pushing me to become the best version of myself.\""
     },
     {
-        name: "Justin Villasenor",
+        name: "James Tanner",
         gradYear: "2026",
         major: "Computer Science",
-        position: "Co-Media Director",
+        position: "Co-Director of Media",
         image: "/assets/images/headshots/justin_headshot2.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/justinvillasenor/",
         bio: "\"SHPE has been the familia I never knew I needed — a space where I’ve grown as a leader, a student, and a person. I’ve found a community that’s helped me step into amazing opportunities.\""
     },  
     {
-        name: "Linda Carillo",
+        name: "Diego Perez",
         gradYear: "2027",
         major: "Manufacturing Engineering",
         position: "Director of Events",
@@ -81,9 +81,9 @@ export const officers: Officer[] = [
         bio: "\"SHPE is opportunity, growth, and familia— a community where meaningful connections are built through the service we do together. \""
     },  
     {
-        name: "Thomas Mendoza",
-        gradYear: "2026",
-        major: "Computer Science",
+        name: "Adrian Hackett",
+        gradYear: "2029",
+        major: "Electrical Engineering",
         position: "Director of Technology",
         image: "/assets/images/headshots/thomas_headshot.jpg",
         group: "Board of Directors",
@@ -91,17 +91,17 @@ export const officers: Officer[] = [
         bio: "\"SHPE to me means familia, I wouldn’t be where I am without them and I strive to always make them proud.\""
     },
     {
-        name: "Emily Barrera",
+        name: "Vicente Chavez",
         gradYear: "2026",
         major: "Marketing",
-        position: "Co-Media Director",
+        position: "Co-Director of Media",
         image: "/assets/images/headshots/emily_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/emily--barrera/",
         bio: "\"SHPE has inspired me to think bigger for my future and that anything is possible with a great community around you! \""
     },
     {
-        name: "Aiden Olivarez",
+        name: "Joaquin Valeriano",
         gradYear: "2026",
         major: "Electrical Engineering",
         position: "Co-Director of Athletics",
@@ -111,7 +111,7 @@ export const officers: Officer[] = [
         bio: "\"I feel truly blessed to be apart of SHPE, a community that has welcomed me with open arms and connected me with others who share similar college experiences.\""
     },
     {
-        name: "Yaneli Aguilar",
+        name: "Kiana Monsivais",
         gradYear: "2026",
         major: "Civil Engineering",
         position: "Co-Director of Athletics",
@@ -121,7 +121,7 @@ export const officers: Officer[] = [
         bio: "\"For me, SHPE means family and culture, it’s a place where students come together and create a welcoming community.\""
     },
     {
-        name: "Dalton Krawczynski",
+        name: "Sebastian Hernandez",
         gradYear: "2027",
         major: "Computer Science",
         position: "Director of Events Assistant",
@@ -131,7 +131,7 @@ export const officers: Officer[] = [
         bio: "\"To me, SHPE is proof that when you combine community, culture, and code, you compile innovation everyone can run with.\""
     },
     {
-        name: "Ivan Martinez",
+        name: "Fidel Rocha Loza",
         gradYear: "2027",
         major: "Electrical Engineering",
         position: "Treasurer Assistant",
@@ -141,7 +141,7 @@ export const officers: Officer[] = [
         bio: "\"For me, SHPE means uplifting and supporting one another out of a shared desire to make an impact for hispanics in STEM\""
     },
     {
-        name: "Danielle Legarda",
+        name: "Alexsandra Luna Gonzalez",
         gradYear: "2027",
         major: "Civil Engineering",
         position: "Director of SHPEtinas",
@@ -151,10 +151,10 @@ export const officers: Officer[] = [
         bio: "\"To me, SHPE is where I found people who understand my goals, challenges, and background. It gave me the confidence to pursue engineering, grow as a leader, and feel supported by a family-like community.\""
     },
     {
-        name: "Santiago Bolanos",
+        name: "Samantha Conejo",
         gradYear: "2027",
         major: "Computer Science",
-        position: "External Affairs Assistant",
+        position: "External Affairs Executive Assistant",
         image: "/assets/images/headshots/santi_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/santiago-rubio-bolanos/",
@@ -191,7 +191,7 @@ export const officers: Officer[] = [
         bio: "\To me, SHPE is a lot more than a professional organization! It feels like a family that empowers you to grow and helps embrace development as a leader.\""
     },
     {
-        name: "Victoria Ramos",
+        name: "Cristian Vizcaya",
         gradYear: "2027",
         major: "Civil Engineering",
         position: "Director of Fundraising",
@@ -211,20 +211,20 @@ export const officers: Officer[] = [
         bio: "\"SHPE is a welcoming community and a home far from home full of opportunities to grow.\""
     }, 
     {
-        name: "Aldo Guerrero",
+        name: "Angelica Fernandez",
         gradYear: "2026",
         major: "Computer Science",
-        position: "Chapter Development Director",
+        position: "Director of Chapter Development",
         image: "/assets/images/headshots/aldo_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/aldo-guerrero-75289a262/",
         bio: "\"SHPE is a reminder that a group of ambitious strangers can become a familia, and grow not only professionally, but personally as well. \""
     },
     {
-        name: "Javier Garcia",
+        name: "Eladio Gonzalez",
         gradYear: "2026",
         major: "Electrical Engineering",
-        position: "Fundraising Assistant",
+        position: "Director of Fundraising Assistant",
         image: "/assets/images/headshots/javi_headshot.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/javier-garcia-9478292b6/",

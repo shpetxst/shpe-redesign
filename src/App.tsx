@@ -31,7 +31,7 @@ const sponsors: CarouselItem[] = [
     website: 'https://www.ufcu.org/'
   },
   {
-    image: '/assets/images/sponsors/Screenshot 2026-08-28 at 8.42.38 PM.png',
+    image: '/assets/images/sponsors/Nvidia-Logo-Download-PNG-Image.png',
     title: 'nvidia',
     subtitle: 'Supporting SHPE since 2026',
     alt: 'Nvidia logo',
