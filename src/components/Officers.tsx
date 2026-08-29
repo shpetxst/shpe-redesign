@@ -67,7 +67,7 @@ const Officers = () => {
         <div className="bg-primary-600 rounded-xl overflow-hidden flex flex-col md:flex-row h-64 md:h-80">
           <div className="flex-1 flex flex-col justify-center p-8 text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Meet the 2025-2026 Officers
+              Meet the 2026-2027 Officers
             </h1>
             <p className="text-xl opacity-90">
               Committed to leading with purpose and uplifting our SHPE familia.

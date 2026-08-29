@@ -97,14 +97,14 @@ const AboutSection = () => {
                 SHPE has been one of the most meaningful parts of my journey as a Hispanic engineering student. It’s not only helped me develop professionally and as a leader, but it’s also given me something even more valuable; a second familia. Through SHPE, I’ve watched our members grow, gain confidence, and achieve goals they once thought were out of reach. I’ve seen lives change, including my own. I truly believe SHPE will continue to empower and uplift our community. And if there’s one thing I know for sure, you’ll never walk this journey alone. SHPE will be there, guiding you, believing in you, and standing by you every step of the way.
                 </p>
                 <div>
-                  <p className="text-white font-semibold">Maresa Castañeda, President</p>
-                  <p className="text-primary-200">Civil Engineering, Class of 2026</p>
+                  <p className="text-white font-semibold">Victoria Ramos, President</p>
+                  <p className="text-primary-200">Civil Engineering, Class of 2028</p>
                 </div>
               </div>
             </div>
             <div className="hidden md:block relative">
               <img
-                src="/assets/images/mar-accent.jpeg"
+                src="public/Headshots2627/President_Headshot.png"
                 alt="Statement from our president"
                 className="absolute inset-0 h-full w-full object-cover"
               />
