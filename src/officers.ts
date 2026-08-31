@@ -85,7 +85,7 @@ export const officers: Officer[] = [
         gradYear: "2029",
         major: "Electrical Engineering",
         position: "Director of Technology",
-        image: "/assets/images/headshots/thomas_headshot.jpg",
+        image: "/Headshots2627/Adrian_NEW.png",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/adrian-hackett-6788b3382/",
         bio: "\"SHPE to me means familia, I wouldn’t be where I am without them and I strive to always make them proud.\""
