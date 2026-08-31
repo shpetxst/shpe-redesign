@@ -31,7 +31,7 @@ export const officers: Officer[] = [
         bio: "\"To me, SHPE is where I found community, friendship, and growth both academically and professionally. I came in not knowing what SHPE was, but now I can’t imagine college without it; SHPE truly feels like my familia.\""
     },  
     {
-        name: "Linda Carillo",
+        name: "Linda Carrillo",
         gradYear: "2027",
         major: "Manufacturing Engineering",
         position: "External Affairs Executive",
