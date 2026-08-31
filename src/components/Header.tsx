@@ -150,9 +150,21 @@ const Header = () => {
               )}
             </div>
           ))}
-          {/* <button className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200">
-            Join Us
-          </button> */}
+          <div className="flex items-center space-x-3">
+            {/* Donate Button */}
+            <a
+              href="https://gofund.me/1f0496ab8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200"
+            >
+              Donate
+            </a>
+            {/* Join Us Button */}
+            <button className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200">
+              Join Us
+            </button>
+          </div>
         </nav>
         
         {/* Mobile Menu Button */}
@@ -201,7 +213,15 @@ const Header = () => {
                 ))}
               </React.Fragment>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
+              <a
+                href="https://gofund.me/1f0496ab8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200"
+              >
+                Donate
+              </a>
               <button className="w-full bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200">
                 Join Us
               </button>

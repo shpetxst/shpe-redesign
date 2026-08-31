@@ -65,7 +65,7 @@ export const officers: Officer[] = [
         gradYear: "2027",
         major: "Mechanical Engineering",
         position: "Co-Director of Media",
-        image: "/Headshots2627/James.JPG",
+        image: "/Headshots2627/James_NEW.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/jtanner05/",
         bio: "\"SHPE has been the familia I never knew I needed — a space where I’ve grown as a leader, a student, and a person. I’ve found a community that’s helped me step into amazing opportunities.\""
@@ -95,7 +95,7 @@ export const officers: Officer[] = [
         gradYear: "2027",
         major: "Mechanical Engineering",
         position: "Co-Director of Media",
-        image: "/assets/images/headshots/emily_headshot.jpg",
+        image: "/Headshots2627/Vicente_NEW.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/emily--barrera/",
         bio: "\"Familia means supporting one another and wanting to see everyone succeed\""
@@ -165,7 +165,7 @@ export const officers: Officer[] = [
         gradYear: "2027",
         major: "Mechanical Engineering",
         position: "Director of Fundraising",
-        image: "/Headshots2627/Cristian.JPG",
+        image: "/Headshots2627/Cristian_NEW.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/cristian-vizcaya/",
         bio: "\"To me, SHPE means community that supports and pushes you to grow out of your comfort zone.\""
