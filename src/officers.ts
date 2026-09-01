@@ -12,23 +12,23 @@ export interface Officer {
 export const officers: Officer[] = [
     {
         name: "Victoria Ramos",
-        gradYear: "2028",
+        gradYear: "2027",
         major: "Civil Engineering",
         position: "President",
         image: "/Headshots2627/Victoria.JPG",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/victoria-ramos-96bb71418/",
-        bio: "\"SHPE means familia and growth. It's helped me form lifelong friendships and shaped my professional journey as an engineer.\""
+        bio: "\"Familia to me means a community that is here for you through the highs and lows. This group of like minded individuals strive to see one another grow and push outside of our comfort zones. Together we stride towards success!\""
     }, 
     {
-        name: "Haily Montenegro",
-        gradYear: "2027",
+        name: "Haily Montenegro Caceres",
+        gradYear: "2028",
         major: "Industrial Engineering",
         position: "Vice President",
         image: "/Headshots2627/Haily.JPG",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/haily-montenegro/",
-        bio: "\"To me, SHPE is where I found community, friendship, and growth both academically and professionally. I came in not knowing what SHPE was, but now I can’t imagine college without it; SHPE truly feels like my familia.\""
+        bio: "\"Familia means being there for each other, and staying committed to one another even when times are rough.\""
     },  
     {
         name: "Linda Carrillo",
@@ -38,17 +38,17 @@ export const officers: Officer[] = [
         image: "/Headshots2627/Linda.JPG",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/linda-carrillo-moran/",
-        bio: "\"In SHPE, I found the tools to grow as a leader, the people to rise with as a community, and the purpose to keep pushing forward; not just for myself, but for those coming after me.\""
+        bio: "\"Familia means building a community with like-minded individuals and working together.\""
     },
     {
         name: "Lilly Gomez",
-        gradYear: "2027",
+        gradYear: "2028",
         major: "Civil Engineering",
         position: "Internal Affairs Executive",
         image: "/Headshots2627/Lilly.JPEG",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/lilly-gomez-ce/",
-        bio: "\"SHPE means to me, turning dreams into action alongside people who understand my journey. It's a commitment to lift others as we rise together. \""
+        bio: "\"To me, SHPE is familia. It's a community that encourages my professional growth, fosters genuine friendships, and always feels like home.\""
     },
     {
         name: "Pierre Picazo",
@@ -58,7 +58,7 @@ export const officers: Officer[] = [
         image: "/Headshots2627/Pierre Picazo.JPG",
         group: "Executive Board",
         linkedin: "https://www.linkedin.com/in/pierre-picazo-2698633015342958bh/",
-        bio: "\"Through SHPE, I found mentors, friends, and a community that made me feel like I belong while pushing me to become the best version of myself.\""
+        bio: "\"A community where there is comfort to express ideas and talk about difficulties. Creating a support beam for everyone to lean on and not worry about it falling.\""
     },
     {
         name: "James Tanner",
@@ -68,7 +68,7 @@ export const officers: Officer[] = [
         image: "/Headshots2627/James_NEW.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/jtanner05/",
-        bio: "\"SHPE has been the familia I never knew I needed — a space where I’ve grown as a leader, a student, and a person. I’ve found a community that’s helped me step into amazing opportunities.\""
+        bio: "\"Familia is the people you grow up with-whether that is your literal blood family or those around you who helped you learn and grow as a person.\""
     },  
     {
         name: "Diego Perez",
@@ -88,27 +88,27 @@ export const officers: Officer[] = [
         image: "/Headshots2627/Adrian_NEW.png",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/adrian-hackett-6788b3382/",
-        bio: "\"SHPE to me means familia, I wouldn’t be where I am without them and I strive to always make them proud.\""
+        bio: "\"SHPE is a place where you can grow as an individual and as a familia.\""
     },
     {
         name: "Vicente Chavez",
-        gradYear: "2027",
+        gradYear: "2029",
         major: "Mechanical Engineering",
         position: "Co-Director of Media",
         image: "/Headshots2627/Vicente_NEW.jpg",
         group: "Board of Directors",
-        linkedin: "https://www.linkedin.com/in/emily--barrera/",
+        linkedin: "https://www.linkedin.com/in/vicente-chavez-627754398/",
         bio: "\"Familia means supporting one another and wanting to see everyone succeed\""
     },
     {
-        name: "Joaquin Valeriano",
+        name: "Joaquín Valeriano",
         gradYear: "2027",
         major: "Electrical Engineering",
         position: "Co-Director of Athletics",
         image: "/Headshots2627/Joaquin.JPG",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/joaquin-valeriano-7669963b1/",
-        bio: "\"I feel truly blessed to be apart of SHPE, a community that has welcomed me with open arms and connected me with others who share similar college experiences.\""
+        bio: "\"A community of people who can help me and I can help with whatever we need\""
     },
     {
         name: "Kiana Monsivais",
@@ -132,13 +132,13 @@ export const officers: Officer[] = [
     },
     {
         name: "Fidel Rocha Loza",
-        gradYear: "2028",
+        gradYear: "2027",
         major: "Computer Science",
         position: "Treasurer Assistant",
         image: "/Headshots2627/Fidel.JPG",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/fidel-rocha/",
-        bio: "\"For me, SHPE means uplifting and supporting one another out of a shared desire to make an impact for hispanics in STEM\""
+        bio: "\"A community that's builds each other up and has fun\""
     },
     {
         name: "Alexsandra Luna Gonzalez",
@@ -168,7 +168,7 @@ export const officers: Officer[] = [
         image: "/Headshots2627/Cristian_NEW.jpg",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/cristian-vizcaya/",
-        bio: "\"To me, SHPE means community that supports and pushes you to grow out of your comfort zone.\""
+        bio: "\"A community that champions individual aspirations and caters to authenticity\""
     },
     {
         name: "Angelica Fernandez",
@@ -178,7 +178,7 @@ export const officers: Officer[] = [
         image: "/Headshots2627/Angelica.JPG",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/angelicafg1003/",
-        bio: "\"SHPE is a reminder that a group of ambitious strangers can become a familia, and grow not only professionally, but personally as well. \""
+        bio: "\"To me, Familia means being part of a supportive community I know I can rely on when I needed\""
     },
     {
         name: "Eladio Gonzalez",
@@ -188,7 +188,7 @@ export const officers: Officer[] = [
         image: "/Headshots2627/Eladio.JPG",
         group: "Board of Directors",
         linkedin: "https://www.linkedin.com/in/eladio-gonzalez-6511963b3/",
-        bio: "\"SHPE means embracing a community where culture, resilience, and innovation come together to empower Latinos in STEM. It’s about lifting each other up and proving that our heritage is our strength.\""
+        bio: "\"To me, Familia are the people close to you, both friends and relatives, that can help you grow as a person.\""
     },
 ]
 

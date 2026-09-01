@@ -94,7 +94,7 @@ const AboutSection = () => {
                   <path d="M9.352 4C4.456 4 2 7.456 2 11.352v16.256c0 0.8 0.8 1.6 1.6 1.6h8c0.8 0 1.6-0.8 1.6-1.6v-8c0-0.8-0.8-1.6-1.6-1.6h-3.2v-0.8c0-1.6 1.6-3.2 3.2-3.2h1.6c0.8 0 1.6-0.8 1.6-1.6v-6.4c0-0.8-0.8-1.6-1.6-1.6h-1.6z M23.2 4c-4.8 0-7.2 3.456-7.2 7.352v16.256c0 0.8 0.8 1.6 1.6 1.6h8c0.8 0 1.6-0.8 1.6-1.6v-8c0-0.8-0.8-1.6-1.6-1.6h-3.2v-0.8c0-1.6 1.6-3.2 3.2-3.2h1.6c0.8 0 1.6-0.8 1.6-1.6v-6.4c0-0.8-0.8-1.6-1.6-1.6h-1.6z" />
                 </svg>
                 <p className="text-xl md:text-2xl font-medium text-white mb-6 leading-relaxed">
-                SHPE has been one of the most meaningful parts of my journey as a Hispanic engineering student. It’s not only helped me develop professionally and as a leader, but it’s also given me something even more valuable; a second familia. Through SHPE, I’ve watched our members grow, gain confidence, and achieve goals they once thought were out of reach. I’ve seen lives change, including my own. I truly believe SHPE will continue to empower and uplift our community. And if there’s one thing I know for sure, you’ll never walk this journey alone. SHPE will be there, guiding you, believing in you, and standing by you every step of the way.
+                Familia to me means a community that is here for you through the highs and lows. This group of like minded individuals strive to see one another grow and push outside of our comfort zones. Together we stride towards success!
                 </p>
                 <div>
                   <p className="text-white font-semibold">Victoria Ramos, President</p>

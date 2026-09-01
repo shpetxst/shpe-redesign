@@ -87,9 +87,6 @@ const ContactSection = () => {
                   <a href="https://www.instagram.com/shpe.txst/"  target='_blank' rel="noreferrer noopener" className="bg-primary-100 hover:bg-primary-200 text-primary-600 p-3 rounded-full transition-colors">
                     <Instagram className="h-5 w-5" />
                   </a>
-                  <a href="https://x.com/ShpeTxst" target='_blank' rel="noreferrer noopener" className="bg-primary-100 hover:bg-primary-200 text-primary-600 p-3 rounded-full transition-colors">
-                    <Twitter className="h-5 w-5" />
-                  </a>
                   <a href="https://www.linkedin.com/company/txst-shpe/posts/?feedView=all" target='_blank' rel="noreferrer noopener" className="bg-primary-100 hover:bg-primary-200 text-primary-600 p-3 rounded-full transition-colors">
                     <Linkedin className="h-5 w-5" />
                   </a>

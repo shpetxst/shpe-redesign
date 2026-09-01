@@ -97,7 +97,7 @@ const Merits = () => {
               <div className="relative" style={{ overflow: 'hidden' }}>
                 <iframe
                   id="iframe-lb_mdnnos2t"
-                  src="https://trackscore.online/embed/lb_mdnnos2t"
+                  src="https://trackscore.online/l/lb_mt8wwt5a"
                   className="merit-iframe"
                   style={{ width: '100%', minHeight: '400px', border: 'none' }}
                   scrolling="yes"
@@ -110,7 +110,7 @@ const Merits = () => {
               <div className="relative" style={{ overflow: 'hidden' }}>
                 <iframe
                   id="iframe-lb_mdnnxzh8"
-                  src="https://trackscore.online/embed/lb_mdnnxzh8"
+                  src="https://trackscore.online/l/lb_mti5c74g"
                   className="merit-iframe"
                   style={{ width: '100%', minHeight: '400px', border: 'none' }}
                   scrolling="yes"
