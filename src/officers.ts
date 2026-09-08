@@ -103,7 +103,7 @@ export const officers: Officer[] = [
     {
         name: "Joaquín Valeriano",
         gradYear: "2027",
-        major: "Electrical Engineering",
+        major: "Mechanical Engineering",
         position: "Co-Director of Athletics",
         image: "/Headshots2627/Joaquin.JPG",
         group: "Board of Directors",
