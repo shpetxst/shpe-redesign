@@ -31,13 +31,6 @@ const sponsors: CarouselItem[] = [
     website: 'https://www.ufcu.org/'
   },
   {
-    image: '/assets/images/sponsors/Nvidia-Logo-Download-PNG-Image.png',
-    title: 'Nvidia',
-    subtitle: 'Supporting SHPE since 2026',
-    alt: 'Nvidia logo',
-    website: 'https://www.nvidia.com/'
-  },
-  {
     image: '/assets/images/sponsors/lcra.png',
     title: 'LCRA',
     subtitle: 'Supporting SHPE since 2025',
